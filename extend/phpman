@@ -1,0 +1,2 @@
+#!/bin/sh
+open http://cn2.php.net/$1
