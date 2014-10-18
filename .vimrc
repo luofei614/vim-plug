@@ -19,7 +19,7 @@ Plug 'L9'
 Plug 'FuzzyFinder'
 "快速浏览文件，FuzzyFinder 也能快速浏览文件， 但是如果项目文件多会很慢
 "如果系统升级可以需要运行 gem update --system, do中的命令可能需要手动运行 
-Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make'} 
+Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make','on':'CommandT'} 
 
 
 " Plugin outside ~/.vim/plugged with post-update hook
