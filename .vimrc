@@ -5,6 +5,8 @@ Plug 'junegunn/vim-easy-align'
 " Plugin options
 Plug 'nsf/gocode', { 'rtp': 'vim' }
 
+Plug 'https://github.com/luofei614/vim-plug', { 'rtp': 'extend','dir':'~/.vim/extend'}
+
 Plug 'AutoComplPop'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Tagbar'
