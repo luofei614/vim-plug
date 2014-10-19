@@ -8,6 +8,8 @@
 
  然后打开vim 运行  :PlugInstall 就能安装上所有插件(共43个插件)
 
+ 这些VIM配置我已经用了快两年了，用着非常爽。 所以特意整理出来分享给大家，大家只需要简单的执行上面三条命令就能获得我的配置。
+
 安装好后效果如下：
 ![enter image description here](http://sinaclouds-blog.stor.sinaapp.com/vim.png)
 
@@ -36,6 +38,7 @@
 * shift+q: 快速退出VIM。  如果vim同时打开多个文件是，不用挨着一个一个关闭。
 
 建议大家在看看.vimrc 配置文件 了解更多用法。
+
 
 据说练好VIM就能找个好工作，现在优秀的人才找工作都用竟鹿：http://www.jobdeer.com/
 
