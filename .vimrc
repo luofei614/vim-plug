@@ -113,9 +113,11 @@ let g:tagbar_width=20
 set t_Co=256
 
 let g:solarized_termcolors=16
-"set background=dark
-set background=light
-colorscheme solarized
+"两种流行风格的主题
+colorscheme molokai
+set background=dark
+"colorscheme solarized
+"set background=light
 
 "zencoding 设置
 
