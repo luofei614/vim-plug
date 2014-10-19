@@ -1,3 +1,5 @@
+	
+
 运行三个命令配置一个强大的VIM编辑器。  
 
      # mkdir -p ~/.vim/autoload
@@ -25,9 +27,14 @@
 
 * ctrl+p :   快速查找文件 ， 此功能基于ruby， 如果你环境没有ruby可能运行失败， 请安装ruby后， 在执行命令：
 
-    cd ~/.vim/plugged/Command-T/ruby/command-t
-    ruby extconf.rb
-    make
+
+	`#cd ~/.vim/plugged/Command-T/ruby/command-t `
+	
+	`#ruby extconf.rb `
+	
+	`#make `
+
+
 
 * ctrl+f : 快速查找当前文件中的函数 
 
