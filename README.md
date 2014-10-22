@@ -25,16 +25,7 @@
 
 * F2: 可以快速查函数手册， 如果当前VIM的光标在php的file_put_contents函数上，按一下F2 会自动打开PHP手册的网页。
 
-* ctrl+p :   快速查找文件 ， 此功能基于ruby， 如果你环境没有ruby可能运行失败， 请安装ruby后， 在执行命令：
-
-
-	`#cd ~/.vim/plugged/Command-T/ruby/command-t `
-	
-	`#ruby extconf.rb `
-	
-	`#make `
-
-
+* ctrl+p :   快速查找文件 ， 此功能基于ruby， 如果您环境没有ruby 请先安装ruby：
 
 * ctrl+f : 快速查找当前文件中的函数 
 
@@ -46,13 +37,6 @@
 
 建议大家在看看.vimrc 配置文件 了解更多用法。
 
-
 据说练好VIM就能找个好工作，现在优秀的人才找工作都用竟鹿：http://www.jobdeer.com/
-
-
-
-
-
-
 
 

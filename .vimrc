@@ -19,12 +19,12 @@ Plug 'L9'
 Plug 'FuzzyFinder'
 "快速浏览文件，FuzzyFinder 也能快速浏览文件， 但是如果项目文件多会很慢
 "如果系统升级可以需要运行 gem update --system, do中的命令可能需要手动运行 
-Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make','on':'CommandT'} 
+"Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make','on':'CommandT'} 
 
 
 " Plugin outside ~/.vim/plugged with post-update hook
 " 下面这个插件可取代Command-T 但是现在暂时不支持目录忽略，所以先暂时不用
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'WebAPI.vim'
 
 Plug 'Gist.vim'
@@ -185,8 +185,19 @@ map! <F12> <Esc>:TagbarToggle<CR>
 
 "快速查找文件
 
-map <C-P> :CommandT<CR>
-map! <C-P> <Esc>:w<CR>:CommandT<CR>
+"map <C-P> :CommandT<CR>
+"map! <C-P> <Esc>:w<CR>:CommandT<CR>
+
+"文件新tab页打开, CommandT插件配置
+let g:CommandTAcceptSelectionMap = '<space>'
+let g:CommandTAcceptSelectionTabMap = '<CR>'
+
+" 用FZF 查找文件 
+" 设置查找时排除的目录
+:let $FZF_DEFAULT_COMMAND  = 'find . -type f ! -path "./node_modules/*" ! -path "./bower_components/*" ! -path "./.git/*" ! -path "*.swp"'
+map <C-P> :tabnew<CR>:FZF<CR>
+map!<C-P> <ESc>:w<CR> :tabnew<CR>:FZF<CR>
+
 
 
 "快速对齐
@@ -195,11 +206,6 @@ vmap <Enter> <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
 nmap <Leader>a <Plug>(EasyAlign)
-
-"文件新tab页打开
-let g:CommandTAcceptSelectionMap = '<space>'
-let g:CommandTAcceptSelectionTabMap = '<CR>'
-
 
 "快速查找文函数
 
