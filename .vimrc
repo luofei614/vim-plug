@@ -12,7 +12,8 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Tagbar'
 "Bundle 'minibufexpl.vim'
 
-Plug 'ZenCoding.vim'
+"zencoding 改名为了 Emmet
+Plug 'https://github.com/vim-scripts/Emmet.vim'
 
 Plug 'L9'
 
@@ -119,11 +120,11 @@ set background=dark
 "colorscheme solarized
 "set background=light
 
-"zencoding 设置
+"emmet 设置
 
-let g:user_zen_expandabbr_key='<C-Y>' 
+let g:user_emmet_expandabbr_key = '<C-Y>'
 
-let g:use_zen_complete_tag = 1
+let g:use_emmet_complete_tag = 1
 
 "Gist设置
 
