@@ -13,7 +13,7 @@ Plug 'Tagbar'
 "Bundle 'minibufexpl.vim'
 
 "zencoding 改名为了 Emmet
-Plug 'https://github.com/vim-scripts/Emmet.vim'
+Plug 'https://github.com/luofei614/Emmet.vim'
 
 Plug 'L9'
 
@@ -123,8 +123,8 @@ set background=dark
 "emmet 设置
 
 let g:user_emmet_expandabbr_key = '<C-Y>'
-
 let g:use_emmet_complete_tag = 1
+let g:user_emmet_settings = {"lang":"zh-cn"}
 
 "Gist设置
 
