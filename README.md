@@ -13,7 +13,7 @@
  这些VIM配置我已经用了快两年了，用着非常爽。 所以特意整理出来分享给大家，大家只需要简单的执行上面三条命令就能获得我的配置。
 
 安装好后效果如下：
-![enter image description here](http://sinaclouds-blog.stor.sinaapp.com/vim.png)
+![enter image description here](https://github.com/luofei614/vim-plug/raw/master/screenshot.png)
 
 内置两种流行主题，默认是sublime风格的主题。
 
