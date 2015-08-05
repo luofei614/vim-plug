@@ -20,7 +20,7 @@ Plug 'L9'
 Plug 'FuzzyFinder'
 "快速浏览文件，FuzzyFinder 也能快速浏览文件， 但是如果项目文件多会很慢
 "如果系统升级可以需要运行 gem update --system, do中的命令可能需要手动运行 
-"Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make','on':'CommandT'} 
+"Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make'} 
 
 
 " Plugin outside ~/.vim/plugged with post-update hook
@@ -79,11 +79,13 @@ Plug 'https://github.com/burnettk/vim-angular.git'
 "检查程序语法错误
 Plug 'https://github.com/scrooloose/syntastic.git'
 
+Plug 'https://github.com/vim-scripts/cab.vim.git'
+
 call plug#end()
 
 
 "vimgrep查询时排除composer的vendor目录,排除前端bower和node的包文件目录,CommandT也不会查到他们
-set wildignore=vendor/**,bower_components/**,node_modules/**
+set wildignore=vendor/**
 
 
 let g:used_javascript_libs = 'jQuery,AngularJS,AngularUI,RequireJS'
@@ -224,7 +226,9 @@ vnoremap <c-]> g<c-]>
 
 "映射复制、粘贴、剪贴ctrl+c ctrl+v ctrl+x
 
-"map <C-V> "+pa<Esc>
+map <C-V> "+pa<Esc>
+
+
 
 map! <C-V> <Esc>"+pa
 
@@ -312,6 +316,22 @@ vnoremap <Tab> >
 
 vnoremap <S-Tab> <
 
+"用数字切换tab页面
+noremap  1 1gt
+noremap  2 2gt
+noremap  3 3gt
+noremap  4 4gt
+noremap  5 5gt
+noremap  6 6gt
+noremap  7 7gt
+noremap  8 8gt
+noremap  9 9gt
+noremap  0 :tablast<CR>
+"MAC 下 C-left 和 C-Right是切换屏幕， 所以可能下面两句不会生效
+"nnoremap <C-Left> :tabprevious<CR>
+"nnoremap <C-Right> :tabnext<CR>
+
+
 "语法高亮
 syntax enable
 syntax on
@@ -326,6 +346,7 @@ set expandtab
 set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
+set scrolljump=5
 "删除键
 set backspace=eol,start,indent
 
