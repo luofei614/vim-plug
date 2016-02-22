@@ -23,6 +23,15 @@
 
 * F12：   在编辑器右侧打开当前文件的函数列表， 再安一次F12关闭函数列表。函数列表是基于ctags的先需要在项目目录下运行 `ctags -R`  在VIM中按快捷键 F3 可以自动执行ctags命令。
 
+* 注意，在mac下， F11,F12 是系统默认的快捷键，需要修改系统设置。
+
+![enter image description here](https://github.com/luofei614/vim-plug/raw/master/Fn1.png)
+
+在"设置"->"键盘"中勾选"将F1,F2等快捷键作为标准功能键"
+
+然后选择"快捷键"这个tab页，去掉"显示桌面"和"显示Dashboard"的快捷键
+![enter image description here](https://github.com/luofei614/vim-plug/raw/master/Fn2.png)
+
 * F2: 可以快速查函数手册， 如果当前VIM的光标在php的file_put_contents函数上，按一下F2 会自动打开PHP手册的网页。
 
 * ctrl+p :   快速查找文件 ， 此功能基于ruby， 如果您环境没有ruby 请先安装ruby：

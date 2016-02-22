@@ -17,7 +17,7 @@ Plug 'https://github.com/luofei614/Emmet.vim'
 
 Plug 'L9'
 
-Plug 'FuzzyFinder'
+"Plug 'FuzzyFinder'
 "快速浏览文件，FuzzyFinder 也能快速浏览文件， 但是如果项目文件多会很慢
 "如果系统升级可以需要运行 gem update --system, do中的命令可能需要手动运行 
 "Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make'} 
@@ -36,7 +36,7 @@ Plug 'Solarized'
 
 Plug 'PDV--phpDocumentor-for-Vim'
 
-Plug 'https://github.com/luofei614/html5css3.git'
+"Plug 'https://github.com/luofei614/html5css3.git'
 
 "bookmark  mm 添加书签,  mn 移动书签  mp 移动到前一个书签  ma 删除所有书签
 Plug 'MattesGroeger/vim-bookmarks'
@@ -58,6 +58,9 @@ Plug 'xml.vim'
 Plug 'https://github.com/kana/vim-fakeclip.git'
 
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
+
+"html5插件
+Plug 'othree/html5.vim'
 
 "snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
