@@ -34,7 +34,7 @@
 
 * F2: 可以快速查函数手册， 如果当前VIM的光标在php的file_put_contents函数上，按一下F2 会自动打开PHP手册的网页。
 
-* ctrl+p :   快速查找文件 ， 此功能基于ruby， 如果您环境没有ruby 请先安装ruby：
+* ctrl+p :   快速查找文件, 用的fzf插件， 第一次ctrl+p时会先安装fzf命令， 默认是下载github源码来安装，可能会安装比较慢,在mac下还可以用brew安装`brew install fzf`
 
 * ctrl+f : 快速查找当前文件中的函数 
 
@@ -45,7 +45,5 @@
 * shift+q: 快速退出VIM。  如果vim同时打开多个文件是，不用挨着一个一个关闭。
 
 建议大家在看看.vimrc 配置文件 了解更多用法。
-
-据说练好VIM就能找个好工作，现在优秀的人才找工作都用竟鹿：http://www.jobdeer.com/
 
 
