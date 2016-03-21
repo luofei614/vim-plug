@@ -8,12 +8,13 @@
      # curl -fLo ~/.vimrc \
           https://raw.githubusercontent.com/sherylynn/vim-plug/master/.vimrc
 
- 然后打开vim 运行  :PlugInstall 就能安装上所有插件(共43个插件)
+ 然后打开vim 运行  :PlugInstall 就能安装上所有插件
 
- 这些VIM配置我已经用了快两年了，用着非常爽。 所以特意整理出来分享给大家，大家只需要简单的执行上面三条命令就能获得我的配置。
+ 使用了原主人的配置2年了...终于今天自己定制化了一下
+ 删除了一些配置,增加了eshint等等,更时候react jsx开发
 
 安装好后效果如下：
-![enter image description here](https://github.com/luofei614/vim-plug/raw/master/screenshot.png)
+![enter image description here](https://github.com/sherylynn/vim-plug/raw/master/screenshot.png)
 
 内置两种流行主题，默认是sublime风格的主题。
 
@@ -26,7 +27,7 @@
 * F2: 可以快速查函数手册， 如果当前VIM的光标在php的file_put_contents函数上，按一下F2 会自动打开PHP手册的网页。
 
 * ctrl+p :   快速查找文件 ， 此功能基于ruby， 如果您环境没有ruby 请先安装ruby：
-
+这个功能我给去了
 * ctrl+f : 快速查找当前文件中的函数 
 
 * ctrl+] ： 跳到函数声明出（自己定义的函数，非系统函数），会在当前界面打开函数声明文件，如果想新建个tab页再跳到函数声明处，可以用 `ctrl+\`
