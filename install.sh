@@ -29,8 +29,8 @@ vim -u $HOME/.vimrc +PlugInstall! +PlugClean! +qall
 export SHELL=$system_shell
 
 
-echo "Step4: install eshint"
+echo "Step4: install eslint"
 echo "It will take a long time, just be patient!"
 echo "npm i -g eslint@es6jsx --registry=http://registry.npm.taobao.org"
-npm i -g eshint@es6jsx --registry=http://registry.npm.taobao.org
+npm i -g eslint@es6jsx --registry=http://registry.npm.taobao.org
 echo "Install Done!"

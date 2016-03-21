@@ -23,7 +23,7 @@ Plug 'FuzzyFinder'
 
 " Plugin outside ~/.vim/plugged with post-update hook
 " 下面这个插件可取代Command-T 但是现在暂时不支持目录忽略，所以先暂时不用
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'WebAPI.vim'
 
 Plug 'Gist.vim'
