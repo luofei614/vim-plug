@@ -10,6 +10,5 @@ export PATH=/usr/local/sbin:$PATH
 #    --userconfig=$HOME/.cnpmrc"
 #export http_proxy=http://127.0.0.1:8787/
 #export https_proxy=http://127.0.0.1:8787/
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export LANG=zh_CN.UTF-8
 eval "$(thefuck --alias)"
