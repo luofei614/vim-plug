@@ -5,8 +5,6 @@ Plug 'junegunn/vim-easy-align'
 " Plugin options
 Plug 'nsf/gocode', { 'rtp': 'vim' }
 
-Plug 'https://github.com/luofei614/vim-plug', { 'dir':'~/.vim/my'}
-
 Plug 'AutoComplPop'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Tagbar'
@@ -152,19 +150,19 @@ let javascript_enable_domhtmlcss=1
 
 "php函数自动提示
 
-autocmd FileType php set complete+=k | set dictionary=~/.vim/my/extend/phpclist.txt
+autocmd FileType php set complete+=k | set dictionary=~/.vim/extend/phpclist.txt
 
 "javascript自动提示，包括了jquery
-autocmd FileType javascript set dictionary=~/.vim/my/extend/javascript.dict
-autocmd FileType html set dictionary=~/.vim/my/extend/html.dict
+autocmd FileType javascript set dictionary=~/.vim/extend/javascript.dict
+autocmd FileType html set dictionary=~/.vim/extend/html.dict
 
 "查找手册
 
-autocmd FileType php set keywordprg=~/.vim/my/extend/phpman
+autocmd FileType php set keywordprg=~/.vim/extend/phpman
 
-autocmd FileType javascript,html set keywordprg=~/.vim/my/extend/man
+autocmd FileType javascript,html set keywordprg=~/.vim/extend/man
 
-autocmd FileType css set keywordprg=~/.vim/my/extend/cssman
+autocmd FileType css set keywordprg=~/.vim/extend/cssman
 
 inoremap <C-D> <ESC>:call PhpDocSingle()<CR>i 
 nnoremap <C-D> :call PhpDocSingle()<CR> 
