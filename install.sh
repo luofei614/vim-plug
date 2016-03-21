@@ -25,7 +25,7 @@ lnif "$CURRENT_DIR/" "$HOME/.vim"
 echo "Step3: update/install plugins using vim-plug"
 system_shell=$SHELL
 export SHELL="/bin/sh"
-vim -u $HOME/.vimrc+PlugInstall! +PlugClean! +qall
+vim -u $HOME/.vimrc +PlugInstall! +PlugClean! +qall
 export SHELL=$system_shell
 
 
