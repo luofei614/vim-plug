@@ -70,7 +70,7 @@ Plug 'phpunit'
 "快速跳转到字符
 Plug 'EasyMotion'
 
-"Plug 'https://github.com/bling/vim-airline.git'
+Plug 'https://github.com/bling/vim-airline.git'
 
 Plug 'https://github.com/luofei614/vim-golang.git'
 
@@ -84,16 +84,15 @@ Plug 'mxw/vim-jsx'
 "括号改变
 "Plug 'surround.vim'
 "css color
-"Plug 'ap/vim-css-color'
+Plug 'ap/vim-css-color'
 " {}
-"Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 "</>
 "Plug 'docunext/closetag.vim'
-"Plug 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag'
 "highlight tag
 "Plug 'gregsexton/matchtag'
 "beauty
-Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/matchit.zip'
 call plug#end()
 
@@ -211,9 +210,9 @@ let g:CommandTAcceptSelectionTabMap = '<CR>'
 
 " 用FZF 查找文件 
 " 设置查找时排除的目录
-:let $FZF_DEFAULT_COMMAND  = 'find . -type f ! -path "./node_modules/*" ! -path "./bower_components/*" ! -path "./.git/*" ! -path "*.swp"'
-map <C-P> :tabnew<CR>:FZF<CR>
-map!<C-P> <ESc>:w<CR> :tabnew<CR>:FZF<CR>
+":let $FZF_DEFAULT_COMMAND  = 'find . -type f ! -path "./node_modules/*" ! -path "./bower_components/*" ! -path "./.git/*" ! -path "*.swp"'
+"map <C-P> :tabnew<CR>:FZF<CR>
+"map!<C-P> <ESc>:w<CR> :tabnew<CR>:FZF<CR>
 
 
 
@@ -333,7 +332,6 @@ vnoremap <S-Tab> <
 syntax enable
 syntax on
 set autoindent
-set number
 set smartindent
 set tabstop=2
 set shiftwidth=2
@@ -366,7 +364,7 @@ set nowritebackup
 
 "vim-closetag 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js"
-
+"十字线高亮
 set cursorcolumn          " highlight current column
 set cursorline            " highlight current line
 
@@ -377,11 +375,29 @@ let g:jsx_ext_required = 0
 set foldenable
 "set foldmarker={,}
 " 缩进折叠
-"set foldmethod=indent
+set foldmethod=indent
 " 语法折叠
 "set foldmethod=syntax
 "标记折叠
-set foldmethod=marker
+"set foldmethod=marker
 " 折叠栏 太丑了我都瞎了
 "set foldcolumn=4
-set foldlevel=0
+set foldlevel=99
+"退出后不清空
+"set t_ti= t_te=
+set relativenumber " show relative line number
+set ruler          " show the current line number and column number
+set scrolloff=9    " Set  lines to the cursor - when moving vertically using j/k"
+"代码提示 配合scrooloose/syntastic
+"npm i -g eslint@es6jsx eslint-config-airbnb babel-eslint eslint-plugin-react
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint'
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
