@@ -20,7 +20,7 @@ Plug 'L9'
 Plug 'FuzzyFinder'
 "快速浏览文件，FuzzyFinder 也能快速浏览文件， 但是如果项目文件多会很慢
 "如果系统升级可以需要运行 gem update --system, do中的命令可能需要手动运行 
-"Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make'} 
+"Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make','on':'CommandT'} 
 
 
 " Plugin outside ~/.vim/plugged with post-update hook
@@ -70,7 +70,7 @@ Plug 'phpunit'
 "快速跳转到字符
 Plug 'EasyMotion'
 
-Plug 'https://github.com/bling/vim-airline.git'
+"Plug 'https://github.com/bling/vim-airline.git'
 
 Plug 'https://github.com/luofei614/vim-golang.git'
 
@@ -79,13 +79,27 @@ Plug 'https://github.com/burnettk/vim-angular.git'
 "检查程序语法错误
 Plug 'https://github.com/scrooloose/syntastic.git'
 
-Plug 'https://github.com/vim-scripts/cab.vim.git'
-
+"jsx插件
+Plug 'mxw/vim-jsx'
+"括号改变
+"Plug 'surround.vim'
+"css color
+"Plug 'ap/vim-css-color'
+" {}
+"Plug 'jiangmiao/auto-pairs'
+"</>
+"Plug 'docunext/closetag.vim'
+"Plug 'alvan/vim-closetag'
+"highlight tag
+"Plug 'gregsexton/matchtag'
+"beauty
+Plug 'vim-airline/vim-airline'
+Plug 'vim-scripts/matchit.zip'
 call plug#end()
 
 
 "vimgrep查询时排除composer的vendor目录,排除前端bower和node的包文件目录,CommandT也不会查到他们
-set wildignore=vendor/**
+set wildignore=vendor/**,bower_components/**,node_modules/**
 
 
 let g:used_javascript_libs = 'jQuery,AngularJS,AngularUI,RequireJS'
@@ -167,8 +181,8 @@ map! <F6> <Esc>:! tab vim<CR><CR>
 
 "删除不剪切, rd
 
-nnoremap r "_d
-vnoremap r "_d
+"nnoremap r "_d
+"noremap r "_d
 
 "快速生成tag文件
 
@@ -226,11 +240,10 @@ vnoremap <c-]> g<c-]>
 
 "映射复制、粘贴、剪贴ctrl+c ctrl+v ctrl+x
 
-map <C-V> "+pa<Esc>
+"还原了C-V的多行编辑模式
+"map <C-V> "+pa<Esc>
 
-
-
-map! <C-V> <Esc>"+pa
+"map! <C-V> <Esc>"+pa
 
 map <C-C> "+y
 
@@ -244,8 +257,8 @@ map! <C-A> <Esc>ggVG
 
 "ctrl+s为保存
 
-map <C-S> :w<CR>
-inoremap <C-S> <C-O>:w<CR>
+"map <C-S> :w<CR>
+"inoremap <C-S> <C-O>:w<CR>
 
 "ctrl+z撤销
 
@@ -316,37 +329,20 @@ vnoremap <Tab> >
 
 vnoremap <S-Tab> <
 
-"用数字切换tab页面
-noremap  1 1gt
-noremap  2 2gt
-noremap  3 3gt
-noremap  4 4gt
-noremap  5 5gt
-noremap  6 6gt
-noremap  7 7gt
-noremap  8 8gt
-noremap  9 9gt
-noremap  0 :tablast<CR>
-"MAC 下 C-left 和 C-Right是切换屏幕， 所以可能下面两句不会生效
-"nnoremap <C-Left> :tabprevious<CR>
-"nnoremap <C-Right> :tabnext<CR>
-
-
 "语法高亮
 syntax enable
 syntax on
 set autoindent
 set number
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 "加快速度
 "set synmaxcol=200
 set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
-set scrolljump=5
 "删除键
 set backspace=eol,start,indent
 
@@ -368,3 +364,24 @@ set nobackup
 
 set nowritebackup
 
+"vim-closetag 
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js"
+
+set cursorcolumn          " highlight current column
+set cursorline            " highlight current line
+
+"设置jsx插件对js也解析
+let g:jsx_ext_required = 0
+
+" 代码折叠
+set foldenable
+"set foldmarker={,}
+" 缩进折叠
+"set foldmethod=indent
+" 语法折叠
+"set foldmethod=syntax
+"标记折叠
+set foldmethod=marker
+" 折叠栏 太丑了我都瞎了
+"set foldcolumn=4
+set foldlevel=0
