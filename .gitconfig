@@ -1,0 +1,13 @@
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[user]
+	name = sherylynn
+	email = 352281674@qq.com
+#[http]
+#  proxy = http://127.0.0.1:8787/
+#[https]
+#	proxy = http://127.0.0.1:8787/
+[push]
+	default = simple
