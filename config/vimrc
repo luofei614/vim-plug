@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
-
+let mapleader = ','
+let g:mapleader = ','
 " Make sure you use single quotes
 Plug 'junegunn/vim-easy-align'
 " Plugin options
@@ -93,7 +94,7 @@ Plug 'alvan/vim-closetag'
 "beauty
 Plug 'vim-scripts/matchit.zip'
 "tern js 补全
-Plug 'ternjs/tern_for_vim'
+Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
 call plug#end()
 
 
@@ -246,10 +247,9 @@ vnoremap <c-]> g<c-]>
 
 map <C-C> "+y
 
-map <C-X> "+x
+"map <C-X> "+x
 
 " 映射全选 ctrl+a
-
 map <C-A> ggVG
 
 map! <C-A> <Esc>ggVG
@@ -397,8 +397,19 @@ set statusline+=%*
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
-
+let g:syntastic_error_symbol='✘'
+let g:syntastic_warning_symbol='❗'
+let g:syntastic_style_error_symbol='»'
+let g:syntastic_style_warning_symbol='•'
+let g:syntastic_enable_highlighting = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" ----------------------------------------------------------------------------
+" tern_for_vim
+" ----------------------------------------------------------------------------
+let tern_show_signature_in_pum = 1
+let tern_show_argument_hints = 'on_hold'
+autocmd FileType javascript setlocal omnifunc=tern#Complete
+autocmd FileType javascript nnoremap <leader>d :TernDef<CR>
