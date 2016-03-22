@@ -1,17 +1,14 @@
 	
 
-运行三个命令配置一个强大的VIM编辑器。  
+运行2个命令配置一个强大的VIM编辑器。  
 
-     # mkdir -p ~/.vim/autoload
-     #  curl -fLo ~/.vim/autoload/plug.vim \
-          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-     # curl -fLo ~/.vimrc \
-          https://raw.githubusercontent.com/sherylynn/vim-plug/master/.vimrc
+     # git clone https://github.com/sherylynn/vim-plug.git
+     # cd vim-plug && sh install.sh
 
- 然后打开vim 运行  :PlugInstall 就能安装上所有插件
+ 就能安装上所有插件
 
  使用了原主人的配置2年了...终于今天自己定制化了一下
- 删除了一些配置,增加了eshint等等,更时候react jsx开发
+ 删除了一些配置,增加了eshint等等,更适合react jsx开发
 
 安装好后效果如下：
 ![enter image description here](https://github.com/sherylynn/vim-plug/raw/master/screenshot.png)
@@ -26,18 +23,11 @@
 
 * F2: 可以快速查函数手册， 如果当前VIM的光标在php的file_put_contents函数上，按一下F2 会自动打开PHP手册的网页。
 
-* ctrl+p :   快速查找文件 ， 此功能基于ruby， 如果您环境没有ruby 请先安装ruby：
-这个功能我给去了
 * ctrl+f : 快速查找当前文件中的函数 
 
 * ctrl+] ： 跳到函数声明出（自己定义的函数，非系统函数），会在当前界面打开函数声明文件，如果想新建个tab页再跳到函数声明处，可以用 `ctrl+\`
 
-* 支持ctrl+a 全选  ctrl+c 复制  ctrl+v 粘贴  ctrl+x 剪切。ctrl+s 保存， ctrl+z撤销。   ctrl+c 复制和默认的y复制不一样， 它会复制到系统剪切板， 因此可以在其他软件上面粘贴。 同理  ctrl+v 粘贴的内容是系统剪切板的。
-
 * shift+q: 快速退出VIM。  如果vim同时打开多个文件是，不用挨着一个一个关闭。
 
-建议大家在看看.vimrc 配置文件 了解更多用法。
-
-据说练好VIM就能找个好工作，现在优秀的人才找工作都用竟鹿：http://www.jobdeer.com/
 
 
