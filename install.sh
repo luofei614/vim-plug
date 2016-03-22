@@ -20,7 +20,7 @@ today=`date +%Y%m%d`
 echo "Step2: setting up symlinks"
 lnif $CURRENT_DIR/.vimrc $HOME/.vimrc
 lnif "$CURRENT_DIR/" "$HOME/.vim"
-
+lnif $CURRENT_DIR/.eslintrc.json $HOME/.eslintrc.json
 
 echo "Step3: update/install plugins using vim-plug"
 system_shell=$SHELL
