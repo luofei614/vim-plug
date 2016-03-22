@@ -25,7 +25,7 @@
     "babel/object-shorthand": 1,
     "babel/arrow-parens": 1,
     "babel/no-await-in-loop": 1,
-    "react-native/no-unused-styles": 2,
+//    "react-native/no-unused-styles": 2,
     "react-native/split-platform-components": 2,
     "indent": [
       "error",
