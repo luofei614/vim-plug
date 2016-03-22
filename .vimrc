@@ -387,7 +387,8 @@ set relativenumber " show relative line number
 set ruler          " show the current line number and column number
 set scrolloff=9    " Set  lines to the cursor - when moving vertically using j/k"
 "代码提示 配合scrooloose/syntastic
-"npm i -g eslint@es6jsx eslint-config-airbnb babel-eslint eslint-plugin-react
+"npm i -g eslint eslint-config-airbnb babel-eslint eslint-plugin-react
+"eslint-plugin-react-native
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
