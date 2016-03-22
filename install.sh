@@ -33,5 +33,5 @@ export SHELL=$system_shell
 echo "Step4: install eslint"
 echo "It will take a long time, just be patient!"
 echo "npm i -g eslint --registry=http://registry.npm.taobao.org"
-npm i -g eslint eslint-plugin-babel eslint-plugin-react eslint-plugin-react-native babel-eslint eslint-config-airbnb  --registry=http://registry.npm.taobao.org
+npm i -g eslint eslint_d eslint-plugin-babel eslint-plugin-react eslint-plugin-react-native babel-eslint eslint-config-airbnb  --registry=http://registry.npm.taobao.org
 echo "Install Done!"
