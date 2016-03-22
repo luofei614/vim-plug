@@ -1,0 +1,24 @@
+{
+  "libs": [
+      "browser",
+          "jquery",
+              "ecma6"
+                
+    ],
+    "loadEagerly": [
+        "importantfile.js"
+          
+      ],
+    "plugins": {
+      "requirejs": {
+              "baseURL": "./",
+                    "paths": {}
+                        
+      },
+      "node": {
+            
+      }
+        
+    }
+
+}

@@ -92,6 +92,8 @@ Plug 'alvan/vim-closetag'
 "Plug 'gregsexton/matchtag'
 "beauty
 Plug 'vim-scripts/matchit.zip'
+"tern js 补全
+Plug 'ternjs/tern_for_vim'
 call plug#end()
 
 
