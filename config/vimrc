@@ -1,31 +1,47 @@
 " Basics {
-        set nocompatible        " Must be first line
-        set background=dark     " Assume a dark background
-    " }
+set nocompatible        " Must be first line
+set background=dark     " Assume a dark background
+" Allow to trigger background 
+     function! ToggleBG() 
+         let s:tbg = &background 
+         " Inversion 
+         if s:tbg == "dark" 
+             set background=light 
+         else 
+             set background=dark 
+         endif 
+     endfunction 
+" }
 
-    " Windows Compatible {
-        " On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
-        " across (heterogeneous) systems easier.
-        if has('win32') || has('win64')
-          set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+" Windows Compatible {
+" On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
+" across (heterogeneous) systems easier.
+if has('win32') || has('win64')
+  set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 
-          " Be nice and check for multi_byte even if the config requires
-          " multi_byte support most of the time
-          if has("multi_byte")
-            " Windows cmd.exe still uses cp850. If Windows ever moved to
-            " Powershell as the primary terminal, this would be utf-8
-            set termencoding=cp850
-            " Let Vim use utf-8 internally, because many scripts require this
-            set encoding=utf-8
-            setglobal fileencoding=utf-8
-            " Windows has traditionally used cp1252, so it's probably wise to
-            " fallback into cp1252 instead of eg. iso-8859-15.
-            " Newer Windows files might contain utf-8 or utf-16 LE so we might
-            " want to try them first.
-            set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15
-          endif
-        endif
-    " }
+  " Be nice and check for multi_byte even if the config requires
+  " multi_byte support most of the time
+  if has("multi_byte")
+    " Windows cmd.exe still uses cp850. If Windows ever moved to
+    " Powershell as the primary terminal, this would be utf-8
+    set termencoding=cp850
+    " Let Vim use utf-8 internally, because many scripts require this
+    set encoding=utf-8
+    setglobal fileencoding=utf-8
+    " Windows has traditionally used cp1252, so it's probably wise to
+    " fallback into cp1252 instead of eg. iso-8859-15.
+    " Newer Windows files might contain utf-8 or utf-16 LE so we might
+    " want to try them first.
+    set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15,chines
+set guifont=Consolas:h12
+"解决菜单乱码
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+"解决consle输出乱码
+language messages zh_CN.utf-8
+  endif
+endif
+" }
 
 call plug#begin('$HOME/.vim/plugged')
 let mapleader = ','
@@ -160,10 +176,10 @@ set t_Co=256
 
 let g:solarized_termcolors=16
 "两种流行风格的主题
-colorscheme molokai
+"colorscheme molokai
 "let g:rehash256 = 1
 set background=dark
-"colorscheme solarized
+colorscheme solarized
 "set background=light
 
 "emmet 设置
@@ -318,21 +334,21 @@ map <A-LeftMouse> <C-]>
 
 map! <A-LeftMouse> <Esc><C-]>
 
- 
+
 
 function! InsertTabWrapper()
 
-let col=col('.')-1
+  let col=col('.')-1
 
-if !col || getline('.')[col-1] !~ '\k'
+  if !col || getline('.')[col-1] !~ '\k'
 
-return "\<TAB>"
+    return "\<TAB>"
 
-else
+  else
 
-return "\<C-x>\<C-o>"
+    return "\<C-x>\<C-o>"
 
-endif
+  endif
 
 endfunction
 
