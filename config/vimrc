@@ -1,4 +1,33 @@
-call plug#begin('~/.vim/plugged')
+" Basics {
+        set nocompatible        " Must be first line
+        set background=dark     " Assume a dark background
+    " }
+
+    " Windows Compatible {
+        " On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
+        " across (heterogeneous) systems easier.
+        if has('win32') || has('win64')
+          set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+
+          " Be nice and check for multi_byte even if the config requires
+          " multi_byte support most of the time
+          if has("multi_byte")
+            " Windows cmd.exe still uses cp850. If Windows ever moved to
+            " Powershell as the primary terminal, this would be utf-8
+            set termencoding=cp850
+            " Let Vim use utf-8 internally, because many scripts require this
+            set encoding=utf-8
+            setglobal fileencoding=utf-8
+            " Windows has traditionally used cp1252, so it's probably wise to
+            " fallback into cp1252 instead of eg. iso-8859-15.
+            " Newer Windows files might contain utf-8 or utf-16 LE so we might
+            " want to try them first.
+            set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15
+          endif
+        endif
+    " }
+
+call plug#begin('$HOME/.vim/plugged')
 let mapleader = ','
 let g:mapleader = ','
 " Make sure you use single quotes
@@ -154,19 +183,19 @@ let javascript_enable_domhtmlcss=1
 
 "php函数自动提示
 
-autocmd FileType php set complete+=k | set dictionary=~/.vim/extend/phpclist.txt
+autocmd FileType php set complete+=k | set dictionary=$HOME/.vim/extend/phpclist.txt
 
 "javascript自动提示，包括了jquery
-autocmd FileType javascript set dictionary=~/.vim/extend/javascript.dict
-autocmd FileType html set dictionary=~/.vim/extend/html.dict
+autocmd FileType javascript set dictionary=$HOME/.vim/extend/javascript.dict
+autocmd FileType html set dictionary=$HOME/.vim/extend/html.dict
 
 "查找手册
 
-autocmd FileType php set keywordprg=~/.vim/extend/phpman
+autocmd FileType php set keywordprg=$HOME/.vim/extend/phpman
 
-autocmd FileType javascript,html set keywordprg=~/.vim/extend/man
+autocmd FileType javascript,html set keywordprg=$HOME/.vim/extend/man
 
-autocmd FileType css set keywordprg=~/.vim/extend/cssman
+autocmd FileType css set keywordprg=$HOME/.vim/extend/cssman
 
 inoremap <C-D> <ESC>:call PhpDocSingle()<CR>i 
 nnoremap <C-D> :call PhpDocSingle()<CR> 
