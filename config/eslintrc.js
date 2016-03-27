@@ -2,20 +2,20 @@ module.exports = {
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
     },
     "extends": ["airbnb","eslint:recommended", "plugin:react/recommended"],
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
-            "jsx": true
+            "jsx": true,
         },
-        "sourceType": "module"
+        "sourceType": "module",
     },
     "plugins": [
     "babel",
     "react",
-    "react-native"
+    "react-native",
   ],
     "rules": {
     "babel/generator-star-spacing": 1,
@@ -27,21 +27,22 @@ module.exports = {
     "babel/no-await-in-loop": 1,
 //    "react-native/no-unused-styles": 2,
     "react-native/split-platform-components": 2,
-    "indent": [
-      "error",
-      2
-    ],
+
+    //"indent": [
+    //  "error",
+    //  2
+    //],
     "linebreak-style": [
       "error",
-      "unix"
+      "unix",
     ],
-    "quotes": [
-      "error",
-      "single"
-    ],
+    //    "quotes": [
+    //  "error",
+    //  "single"
+    //],
 //    "semi": [
 //      "error",
 //      "always"
 //    ]
-  }
+  },
 };
