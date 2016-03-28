@@ -12,16 +12,19 @@ IF NOT EXIST "%APP_PATH%" (
     chdir /d "%ORIGINAL_DIR%"
     call cd "%APP_PATH%"
 )
-call rmlink "%HOME%\.vimrc"
-call rmlink "%HOME%\_vimrc" 
-call rmlink "%HOME%\.eslintrc.json" 
-call rmlink "%HOME%\.tern-config" 
+call rm "%HOME%\.vimrc"
+call rm "%HOME%\_vimrc" 
+call rm "%HOME%\.eslintrc.json"
+call rm "%HOME%\.eslintrc.js"
+call rm "%HOME%\.npmrc"
+call rm "%HOME%\.tern-config" 
 call rmdir "%HOME%\.vim" 
 
 call mklink "%HOME%\.vimrc" "%APP_PATH%\config\vimrc"
 call mklink "%HOME%\_vimrc" "%APP_PATH%\config\vimrc"
 call mklink "%HOME%\.eslintrc.json" "%APP_PATH%\config\eslintrc.json"
 call mklink "%HOME%\.tern-config" "%APP_PATH%\config\tern-config"
+call mklink "%HOME%\.npmrc" "%APP_PATH%\config\npmrc"
 call mklink /J "%HOME%\.vim" "%APP_PATH%\"
 
 IF NOT EXIST "%APP_PATH%\plugged" (

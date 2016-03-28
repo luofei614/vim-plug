@@ -139,7 +139,7 @@ Plug 'alvan/vim-closetag'
 "beauty
 Plug 'vim-scripts/matchit.zip'
 "tern js 补全
-Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
+"Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
 call plug#end()
 
 
