@@ -30,13 +30,15 @@ Plug 'vim-scripts/WebAPI.vim'
 
 Plug 'vim-scripts/Gist.vim'
 
-Plug 'vim-scripts/molokai'
+Plug 'https://github.com/tomasr/molokai'
 
-Plug 'vim-scripts/Solarized'
+Plug 'https://github.com/altercation/solarized'
+
+Plug 'https://github.com/altercation/vim-colors-solarized'
 
 Plug 'vim-scripts/PDV--phpDocumentor-for-Vim'
 
-"Plug 'https://github.com/luofei614/html5css3.git'
+" Plug 'https://github.com/luofei614/html5css3.git'
 
 "bookmark  mm 添加书签,  mn 移动书签  mp 移动到前一个书签  ma 删除所有书签
 Plug 'MattesGroeger/vim-bookmarks'
@@ -58,9 +60,6 @@ Plug 'vim-scripts/xml.vim'
 Plug 'https://github.com/kana/vim-fakeclip.git'
 
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
-
-"html5插件
-Plug 'othree/html5.vim'
 
 "snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -120,9 +119,9 @@ set t_Co=256
 
 let g:solarized_termcolors=16
 "两种流行风格的主题
-colorscheme molokai
+"colorscheme molokai
 set background=dark
-"colorscheme solarized
+colorscheme solarized
 "set background=light
 
 "emmet 设置
@@ -355,11 +354,13 @@ set backspace=eol,start,indent
 
 "基本设置
 
-set encoding=utf-8
+"set encoding=utf-8
+"set fileencoding=utf-8
+"set fileencodings=ucs-bom,utf-8,chinese
 
-set fileencoding=utf-8
-
-set fileencodings=ucs-bom,utf-8,chinese
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set enc=utf8
+set fencs=utf8,gbk,gb2312,gb18030
 
 set ambiwidth=double
 
