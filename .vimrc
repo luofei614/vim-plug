@@ -17,7 +17,7 @@ Plug 'https://github.com/luofei614/Emmet.vim'
 
 Plug 'https://github.com/vim-scripts/L9'
 
-Plug 'https://github.com/vim-scripts/FuzzyFinder'
+"Plug 'https://github.com/vim-scripts/FuzzyFinder'
 "快速浏览文件，FuzzyFinder 也能快速浏览文件， 但是如果项目文件多会很慢
 "如果系统升级可以需要运行 gem update --system, do中的命令可能需要手动运行 
 "Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make'} 
@@ -30,15 +30,13 @@ Plug 'https://github.com/vim-scripts/WebAPI.vim'
 
 Plug 'https://github.com/vim-scripts/Gist.vim'
 
-Plug 'https://github.com/tomasr/molokai'
+Plug 'https://github.com/vim-scripts/molokai'
 
-Plug 'https://github.com/altercation/solarized'
-
-Plug 'https://github.com/altercation/vim-colors-solarized'
+Plug 'https://github.com/vim-scripts/Solarized'
 
 Plug 'https://github.com/vim-scripts/PDV--phpDocumentor-for-Vim'
 
-" Plug 'https://github.com/luofei614/html5css3.git'
+"Plug 'https://github.com/luofei614/html5css3.git'
 
 "bookmark  mm 添加书签,  mn 移动书签  mp 移动到前一个书签  ma 删除所有书签
 Plug 'MattesGroeger/vim-bookmarks'
@@ -60,6 +58,9 @@ Plug 'https://github.com/vim-scripts/xml.vim'
 Plug 'https://github.com/kana/vim-fakeclip.git'
 
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
+
+"html5插件
+Plug 'othree/html5.vim'
 
 "snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -119,9 +120,9 @@ set t_Co=256
 
 let g:solarized_termcolors=16
 "两种流行风格的主题
-"colorscheme molokai
+colorscheme molokai
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 "set background=light
 
 "emmet 设置
@@ -354,13 +355,11 @@ set backspace=eol,start,indent
 
 "基本设置
 
-"set encoding=utf-8
-"set fileencoding=utf-8
-"set fileencodings=ucs-bom,utf-8,chinese
+set encoding=utf-8
 
-set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
-set enc=utf8
-set fencs=utf8,gbk,gb2312,gb18030
+set fileencoding=utf-8
+
+set fileencodings=ucs-bom,utf-8,chinese
 
 set ambiwidth=double
 
