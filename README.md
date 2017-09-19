@@ -1,4 +1,5 @@
-	
+[vim-plug](https://github.com/junegunn/vim-plug)
+
 运行三个命令配置一个强大的VIM编辑器。  
 
      # mkdir -p ~/.vim/autoload
