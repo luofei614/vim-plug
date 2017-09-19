@@ -7,17 +7,17 @@ Plug 'nsf/gocode', { 'rtp': 'vim' }
 
 Plug 'https://github.com/luofei614/vim-plug', { 'dir':'~/.vim/my'}
 
-Plug 'https://github.com/vim-scripts/AutoComplPop'
+Plug 'vim-scripts/AutoComplPop'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'https://github.com/vim-scripts/Tagbar'
+Plug 'vim-scripts/Tagbar'
 "Bundle 'minibufexpl.vim'
 
 "zencoding 改名为了 Emmet
 Plug 'https://github.com/luofei614/Emmet.vim'
 
-Plug 'https://github.com/vim-scripts/L9'
+Plug 'vim-scripts/L9'
 
-"Plug 'https://github.com/vim-scripts/FuzzyFinder'
+"Plug 'vim-scripts/FuzzyFinder'
 "快速浏览文件，FuzzyFinder 也能快速浏览文件， 但是如果项目文件多会很慢
 "如果系统升级可以需要运行 gem update --system, do中的命令可能需要手动运行 
 "Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make'} 
@@ -26,15 +26,15 @@ Plug 'https://github.com/vim-scripts/L9'
 " Plugin outside ~/.vim/plugged with post-update hook
 " 下面这个插件可取代Command-T 但是现在暂时不支持目录忽略，所以先暂时不用
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-Plug 'https://github.com/vim-scripts/WebAPI.vim'
+Plug 'vim-scripts/WebAPI.vim'
 
-Plug 'https://github.com/vim-scripts/Gist.vim'
+Plug 'vim-scripts/Gist.vim'
 
-Plug 'https://github.com/vim-scripts/molokai'
+Plug 'vim-scripts/molokai'
 
-Plug 'https://github.com/vim-scripts/Solarized'
+Plug 'vim-scripts/Solarized'
 
-Plug 'https://github.com/vim-scripts/PDV--phpDocumentor-for-Vim'
+Plug 'vim-scripts/PDV--phpDocumentor-for-Vim'
 
 "Plug 'https://github.com/luofei614/html5css3.git'
 
@@ -49,11 +49,11 @@ Plug 'pangloss/vim-javascript'
 Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
 
 
-Plug 'https://github.com/vim-scripts/Mark'
+Plug 'vim-scripts/Mark'
 "css私有前缀
-Plug 'https://github.com/vim-scripts/prefixer.vim'
+Plug 'vim-scripts/prefixer.vim'
 "能缩减HTML代码
-Plug 'https://github.com/vim-scripts/xml.vim'
+Plug 'vim-scripts/xml.vim'
 "安装此插件解决macvim下没有加号寄存器的问题。
 Plug 'https://github.com/kana/vim-fakeclip.git'
 
@@ -68,10 +68,10 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'https://github.com/bonsaiben/bootstrap-snippets.git'
 
-Plug 'https://github.com/vim-scripts/phpunit'
+Plug 'vim-scripts/phpunit'
 
 "快速跳转到字符
-Plug 'https://github.com/vim-scripts/EasyMotion'
+Plug 'vim-scripts/EasyMotion'
 
 Plug 'https://github.com/bling/vim-airline.git'
 
