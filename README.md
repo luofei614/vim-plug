@@ -1,12 +1,11 @@
-[vim-plug](https://github.com/junegunn/vim-plug)
-
+	
 运行三个命令配置一个强大的VIM编辑器。  
 
      # mkdir -p ~/.vim/autoload
      #  curl -fLo ~/.vim/autoload/plug.vim \
           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
      # curl -fLo ~/.vimrc \
-          https://raw.githubusercontent.com/jsyzchen/vim-plug/master/.vimrc
+          https://raw.githubusercontent.com/luofei614/vim-plug/master/.vimrc
 
  然后打开vim 运行  :PlugInstall 就能安装上所有插件(共43个插件)
 
