@@ -74,9 +74,13 @@ Plug 'WebAPI.vim'
 
 Plug 'Gist.vim'
 
-Plug 'molokai'
+Plug 'tomasr/molokai'
 
-Plug 'Solarized'
+Plug 'altercation/solarized'
+
+Plug 'altercation/vim-colors-solarized'
+
+"Plug 'Solarized'
 
 Plug 'PDV--phpDocumentor-for-Vim'
 
@@ -179,10 +183,10 @@ set t_Co=256
 
 let g:solarized_termcolors=16
 "两种流行风格的主题
-colorscheme molokai
+"colorscheme molokai
 "let g:rehash256 = 1
 set background=dark
-"colorscheme solarized
+colorscheme solarized
 "set background=light
 
 "emmet 设置
