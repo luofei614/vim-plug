@@ -140,6 +140,9 @@ Plug 'alvan/vim-closetag'
 Plug 'vim-scripts/matchit.zip'
 "tern js 补全
 "Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
+"Go 插件
+Plug 'fatih/vim-go' , { 'do': ':GoInstallBinaries' }
+
 call plug#end()
 
 
@@ -437,6 +440,12 @@ set scrolloff=9    " Set  lines to the cursor - when moving vertically using j/k
 "代码提示 配合scrooloose/syntastic
 "npm i -g eslint eslint-config-airbnb babel-eslint eslint-plugin-react
 "eslint-plugin-react-native
+
+"
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
