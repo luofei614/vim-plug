@@ -26,11 +26,12 @@ lnif $CURRENT_DIR/config/tern-config $HOME/.tern-config
 lnif $CURRENT_DIR/config/npmrc $HOME/.npmrc
 
 echo "Step3: update/install plugins using vim-plug"
-system_shell=$SHELL
-export SHELL="/bin/sh"
-vim +PlugInstall! +PlugClean! +qall
-export SHELL=$system_shell
-
+#system_shell=$SHELL
+#export SHELL="/bin/sh"
+#vim +PlugInstall! +PlugClean! +qall
+#export SHELL=$system_shell
+#完全忘记自己代码在写啥了
+vim +PlugInstall! +PlugClean! +GoInstallBinaries! +qall
 
 echo "Step4: install eslint"
 echo "It will take a long time, just be patient!"
