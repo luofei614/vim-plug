@@ -31,7 +31,7 @@ call mklink "%HOME%\.vimrc" "%APP_PATH%\config\vimrc"
 call mklink "%HOME%\_vimrc" "%APP_PATH%\config\vimrc"
 call mklink "%HOME%\.eslintrc.json" "%APP_PATH%\config\eslintrc.json"
 call mklink "%HOME%\.tern-config" "%APP_PATH%\config\tern-config"
-call mklink "%HOME%\.npmrc" "%APP_PATH%\config\npmrc"
+::不再覆盖npmrc call mklink "%HOME%\.npmrc" "%APP_PATH%\config\npmrc"
 call mklink /J "%HOME%\.vim" "%APP_PATH%\"
 
 IF NOT EXIST "%APP_PATH%\plugged" (
