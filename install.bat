@@ -5,10 +5,6 @@ cd /d "%~dp0"
 cls
 setlocal EnableDelayedExpansion
 
-set http_proxy=http://127.0.0.1:8087
-set https_proxy=http://127.0.0.1:8087
-rem git config http.proxy http://127.0.0.1:8087
-git config --global http.proxy http://127.0.0.1:8087
 @if not exist "%HOME%" @set HOME=%HOMEDRIVE%%HOMEPATH%
 @if not exist "%HOME%" @set HOME=%USERPROFILE%
 
@@ -51,5 +47,8 @@ IF NOT EXIST "%APP_PATH%\plugged" (
 ::)
 
 call vim +PlugInstall! +PlugClean! +qall
+:: call proxy.bat
+:: 似乎提权后不能用call,但是新建等待却是无忧的
+start /WAIT proxy.bat
 call vim -c "GoInstallBinaries" -c "qa"
 call npm i -g eslint eslint_d eslint-plugin-babel eslint-plugin-react eslint-plugin-react-native babel-eslint eslint-config-airbnb  --registry=http://registry.npm.taobao.org

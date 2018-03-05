@@ -30,7 +30,8 @@ echo "Step3: update/install plugins using vim-plug"
 #export SHELL="/bin/sh"
 vim +PlugInstall! +PlugClean! +qall
 #export SHELL=$system_shell
-#完全忘记自己代码在写啥了
+#完全忘记上面自己切换shell的环境的代码在写啥了
+sh ./proxy.sh
 vim -c "GoInstallBinaries" -c "qa"
 
 echo "Step4: install eslint"
