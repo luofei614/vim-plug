@@ -47,8 +47,6 @@ IF NOT EXIST "%APP_PATH%\plugged" (
 ::)
 
 call vim +PlugInstall! +PlugClean! +qall
-:: call proxy.bat
-:: 似乎提权后不能用call,但是新建等待却是无忧的
 call proxy.bat
 call vim -c "GoInstallBinaries" -c "qa"
 call npm i -g eslint eslint_d eslint-plugin-babel eslint-plugin-react eslint-plugin-react-native babel-eslint eslint-config-airbnb  --registry=http://registry.npm.taobao.org
