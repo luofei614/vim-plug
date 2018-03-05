@@ -1,4 +1,5 @@
-@echo off
+@echo 
+echo 开始安装依赖
 set http_proxy=http://127.0.0.1:8087
 set https_proxy=http://127.0.0.1:8087
 git config http.proxy http://127.0.0.1:8087

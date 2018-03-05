@@ -1,3 +1,5 @@
+#!/bin/bash
+echo 开始安装依赖
 export http_proxy=http://127.0.0.1:8087/
 export https_proxy=http://127.0.0.1:8087/
 git config http.proxy http://127.0.0.1:8087
