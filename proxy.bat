@@ -18,3 +18,5 @@ go get -u golang.org/x/tools/cmd/guru
 go get -u github.com/josharian/impl
 go get -u github.com/dominikh/go-tools/cmd/keyify
 go get -u github.com/fatih/motion
+::用了start命令 所以需要增加一个退出命令
+exit
