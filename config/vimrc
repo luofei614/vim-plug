@@ -146,7 +146,7 @@ Plug 'vim-scripts/matchit.zip'
 "Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
 "Go 插件
 Plug 'fatih/vim-go' , { 'do': ':GoInstallBinaries' }
-
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 
@@ -294,13 +294,13 @@ vnoremap <c-]> g<c-]>
 "映射复制、粘贴、剪贴ctrl+c ctrl+v ctrl+x
 
 "还原了C-V的多行编辑模式
-"map <C-V> "+pa<Esc>
+map <C-V> "+pa<Esc>
 
-"map! <C-V> <Esc>"+pa
+map! <C-V> <Esc>"+pa
 
 map <C-C> "+y
 
-"map <C-X> "+x
+map <C-X> "+x
 
 " 映射全选 ctrl+a
 map <C-A> ggVG
@@ -309,8 +309,8 @@ map! <C-A> <Esc>ggVG
 
 "ctrl+s为保存
 
-"map <C-S> :w<CR>
-"inoremap <C-S> <C-O>:w<CR>
+map <C-S> :w<CR>
+inoremap <C-S> <C-O>:w<CR>
 
 "ctrl+z撤销
 
