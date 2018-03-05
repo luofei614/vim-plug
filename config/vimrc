@@ -147,7 +147,7 @@ Plug 'vim-scripts/matchit.zip'
 "Go 插件
 Plug 'fatih/vim-go' , { 'do': ':GoInstallBinaries' }
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
+"Plug 'mhinz/vim-signify'
 "Plug 'airblade/vim-gitgutter'
 call plug#end()
 
@@ -449,7 +449,10 @@ set scrolloff=9    " Set  lines to the cursor - when moving vertically using j/k
 
 "
 "快捷提交
-nmap <leader>c <Plug>(Gcommit)
+nmap <leader>p <Plug>(Gpush)
+"F5 刷新编辑器
+nmap <F5> :source% <CR> 
+
 autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
