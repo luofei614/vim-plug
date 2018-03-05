@@ -23,7 +23,8 @@ lnif "$CURRENT_DIR/" "$HOME/.vim"
 #lnif $CURRENT_DIR/config/eslintrc.json $HOME/.eslintrc.json
 lnif $CURRENT_DIR/config/eslintrc.js $HOME/.eslintrc.js
 lnif $CURRENT_DIR/config/tern-config $HOME/.tern-config
-lnif $CURRENT_DIR/config/npmrc $HOME/.npmrc
+#不能乱动.npmrc
+#lnif $CURRENT_DIR/config/npmrc $HOME/.npmrc
 
 echo "Step3: update/install plugins using vim-plug"
 #system_shell=$SHELL
