@@ -176,10 +176,6 @@ set ignorecase
 
 let g:acp_behaviorKeywordCommand="\<C-n>"
 
-"搜索高亮
-
-set hlsearch
-
 "设置NERDTreetagbar的宽度
 
 let g:NERDTreeWinSize = 20
@@ -492,6 +488,16 @@ let g:syntastic_check_on_wq = 0
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+"搜索后自动关闭高亮
+" :h g:incsearch#auto_nohlsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 " ----------------------------------------------------------------------------
 " tern_for_vim
 " ----------------------------------------------------------------------------
