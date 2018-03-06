@@ -147,8 +147,11 @@ Plug 'vim-scripts/matchit.zip'
 "Go 插件
 Plug 'fatih/vim-go' , { 'do': ':GoInstallBinaries' }
 Plug 'tpope/vim-fugitive'
-"Plug 'mhinz/vim-signify'
+Plug 'mhinz/vim-signify'
+"上面的比起下面的更美观且快捷
 "Plug 'airblade/vim-gitgutter'
+"增强了搜索，需要映射键位
+Plug 'haya14busa/incsearch.vim'
 call plug#end()
 
 
@@ -472,6 +475,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+"--------------------------------------------------
+"incsearch
+"--------------------------------------------------
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 " ----------------------------------------------------------------------------
 " tern_for_vim
 " ----------------------------------------------------------------------------
