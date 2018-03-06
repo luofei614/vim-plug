@@ -311,7 +311,11 @@ map <C-X> "+x
 " 映射全选 ctrl+a
 "map <C-A> ggVG
 "map! <C-A> <Esc>ggVG
-
+"多窗口切换
+map <C-H> <C-W><C-H>
+map <C-J> <C-W><C-J>
+map <C-K> <C-W><C-K>
+map <C-L> <C-W><C-L>
 " import emacs map
 imap <C-A> <ESC>^i
 imap <C-E> <ESC>$a
