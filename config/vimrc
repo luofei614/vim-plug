@@ -155,6 +155,8 @@ Plug 'mhinz/vim-signify'
 "Plug 'airblade/vim-gitgutter'
 "增强了搜索，需要映射键位
 Plug 'haya14busa/incsearch.vim'
+"v模式下选词 +键扩展 -键缩减
+Plug 'terryma/vim-expand-region'
 call plug#end()
 
 
