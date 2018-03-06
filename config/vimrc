@@ -52,7 +52,10 @@ Plug 'junegunn/vim-easy-align'
 Plug 'nsf/gocode', { 'rtp': 'vim' }
 
 Plug 'AutoComplPop'
+"浏览树
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"浏览树显示git状态插件
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Tagbar'
 "Bundle 'minibufexpl.vim'
 
