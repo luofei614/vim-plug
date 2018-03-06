@@ -308,12 +308,20 @@ map <C-C> "+y
 map <C-X> "+x
 
 " 映射全选 ctrl+a
-map <C-A> ggVG
+"map <C-A> ggVG
+"map! <C-A> <Esc>ggVG
 
-map! <C-A> <Esc>ggVG
-
+" import emacs map
+imap <C-A> <ESC>^i
+imap <C-E> <ESC>$a
+imap <C-K> <ESC>d$i
+map <C-A> ^
+map <C-E> $
+map <C-K> d$
+" git Command
+nnoremap gca :Gcommit -a -v<CR>
+nnoremap gp  :Gpush <CR>
 "ctrl+s为保存
-
 map <C-S> :w<CR>
 inoremap <C-S> <C-O>:w<CR>
 
