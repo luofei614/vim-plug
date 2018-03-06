@@ -318,7 +318,7 @@ imap <C-K> <ESC>d$i
 map <C-A> ^
 map <C-E> $
 map <C-K> d$
-" git Command
+" git Command git使用
 nnoremap gca :Gcommit -a -v<CR>
 nnoremap gp  :Gpush <CR>
 "ctrl+s为保存
