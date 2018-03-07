@@ -67,12 +67,12 @@ Plug 'WebAPI.vim'
 Plug 'Gist.vim'
 
 Plug 'tomasr/molokai'
-
-Plug 'altercation/solarized'
-
-Plug 'altercation/vim-colors-solarized'
-
+"七年没更新的配色能用个鬼
+"Plug 'altercation/solarized'
+"Plug 'altercation/vim-colors-solarized'
 "Plug 'Solarized'
+"找来个支持truecolor的
+Plug 'lifepillar/vim-solarized8'
 
 Plug 'PDV--phpDocumentor-for-Vim'
 
@@ -177,12 +177,30 @@ let g:tagbar_width=20
 
 set t_Co=256
 
-let g:solarized_termcolors=16
+"let g:solarized_termcolors=16
 "两种流行风格的主题
 "colorscheme molokai
 "let g:rehash256 = 1
 set background=dark
-colorscheme solarized
+" Allow to trigger background 
+  function! ToggleBG() 
+    let s:tbg = &background 
+    " Inversion 
+    if s:tbg == "dark" 
+      set background=light 
+    else 
+      set background=dark 
+    endif 
+  endfunction 
+"设置终端真彩色
+"set termguicolors
+colorscheme solarized8
+"high low normal
+let g:solarized_visibility='high'
+"high low normal bold
+let g:solarized_diffmode='bold'
+"老版光标
+let g:solarized_old_cursor_style=1
 map cbg :call ToggleBG()<CR>
 "emmet 设置
 
