@@ -1,16 +1,5 @@
 " Basics {
 set nocompatible        " Must be first line
-"set background=dark " Assume a dark background
-" Allow to trigger background 
-     function! ToggleBG() 
-         let s:tbg = &background 
-         " Inversion 
-         if s:tbg == "dark" 
-             set background=light 
-         else 
-             set background=dark 
-         endif 
-     endfunction 
 " }
 
 " Windows Compatible {
@@ -194,8 +183,7 @@ let g:solarized_termcolors=16
 "let g:rehash256 = 1
 set background=dark
 colorscheme solarized
-"set background=light
-
+map cbg :call ToggleBG()<CR>
 "emmet 设置
 
 let g:user_emmet_expandabbr_key = '<C-Y>'
