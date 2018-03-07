@@ -1,6 +1,6 @@
 " Basics {
 set nocompatible        " Must be first line
-set background=dark " Assume a dark background
+"set background=dark " Assume a dark background
 " Allow to trigger background 
      function! ToggleBG() 
          let s:tbg = &background 
