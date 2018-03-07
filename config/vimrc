@@ -123,13 +123,12 @@ Plug 'EasyMotion'
 
 Plug 'https://github.com/bling/vim-airline.git'
 
-Plug 'https://github.com/luofei614/vim-golang.git'
-
 Plug 'https://github.com/burnettk/vim-angular.git'
 
 "检查程序语法错误
-Plug 'https://github.com/scrooloose/syntastic.git'
-
+"Plug 'https://github.com/scrooloose/syntastic.git'
+"切换到 ale
+Plug 'w0rp/ale'
 "jsx插件
 Plug 'mxw/vim-jsx'
 "括号改变
@@ -149,6 +148,7 @@ Plug 'vim-scripts/matchit.zip'
 "Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
 "Go 插件
 Plug 'fatih/vim-go' , { 'do': ':GoInstallBinaries' }
+"git 插件
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 "上面的比起下面的更美观且快捷
@@ -157,6 +157,7 @@ Plug 'mhinz/vim-signify'
 Plug 'haya14busa/incsearch.vim'
 "v模式下选词 +键扩展 -键缩减
 Plug 'terryma/vim-expand-region'
+
 call plug#end()
 
 
@@ -168,7 +169,7 @@ let g:used_javascript_libs = 'jQuery,AngularJS,AngularUI,RequireJS'
 
 "let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 "php只做语法检查
-let g:syntastic_php_checkers = ['php']
+"let g:syntastic_php_checkers = ['php']
 
 "autocomplpop 设置
 
@@ -473,21 +474,33 @@ autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"状态栏改变
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_javascript_eslint_exec = 'eslint_d'
+"let g:syntastic_error_symbol='✘'
+"let g:syntastic_warning_symbol='❗'
+"let g:syntastic_style_error_symbol='»'
+"let g:syntastic_style_warning_symbol='•'
+"let g:syntastic_enable_highlighting = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint_d'
-let g:syntastic_error_symbol='✘'
-let g:syntastic_warning_symbol='❗'
-let g:syntastic_style_error_symbol='»'
-let g:syntastic_style_warning_symbol='•'
-let g:syntastic_enable_highlighting = 0
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"显示
+let g:airline#extensions#ale#enabled = 1
+"自动完成
+let g:ale_completion_enabled = 1
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
+"自动纠正
+let g:ale_fix_on_save = 1
+"保持打开栏目
+let g:ale_sign_column_always = 1
 "--------------------------------------------------
 "incsearch
 "--------------------------------------------------
