@@ -1,6 +1,6 @@
 " Basics {
 set nocompatible        " Must be first line
-set background=dark     " Assume a dark background
+set background=dark " Assume a dark background
 " Allow to trigger background 
      function! ToggleBG() 
          let s:tbg = &background 
@@ -253,9 +253,9 @@ map! <F3> <Esc>:! ctags -R<CR>
 
 "快捷键设置
 
-map <F11> :NERDTreeToggle<CR>
+map <F3> :NERDTreeToggle<CR>
 
-map! <F11> <Esc>:NERDTreeToggle<CR>
+map! <F3> <Esc>:NERDTreeToggle<CR>
 
 map <F12> :TagbarToggle<CR>
 
