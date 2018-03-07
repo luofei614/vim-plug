@@ -194,6 +194,8 @@ set background=dark
   endfunction 
 "设置终端真彩色
 "set termguicolors
+"旧cmd兼容性待定
+"let g:solarized_use16 = 1
 colorscheme solarized8
 "high low normal
 let g:solarized_visibility='high'
