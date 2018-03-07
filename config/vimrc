@@ -147,6 +147,8 @@ Plug 'haya14busa/incsearch.vim'
 "v模式下选词 +键扩展 -键缩减
 Plug 'terryma/vim-expand-region'
 
+Plug 'liuchengxu/space-vim-dark'
+Plug 'basilgood/Apprentice/'
 call plug#end()
 
 
@@ -175,7 +177,7 @@ let g:tagbar_width=20
 
 "颜色主题设置
 
-set t_Co=256
+"set t_Co=256
 
 "let g:solarized_termcolors=16
 "两种流行风格的主题
@@ -195,15 +197,18 @@ set background=dark
 "设置终端真彩色
 "set termguicolors
 "旧cmd兼容性待定
-"let g:solarized_use16 = 1
-colorscheme solarized8
+let g:solarized_use16 = 1
+"colorscheme solarized8
+colorscheme apprentice
 "high low normal
-let g:solarized_visibility='high'
+"let g:solarized_visibility='high'
 "high low normal bold
-let g:solarized_diffmode='bold'
+"let g:solarized_diffmode='bold'
 "老版光标
-let g:solarized_old_cursor_style=1
+"let g:solarized_old_cursor_style=1
 map cbg :call ToggleBG()<CR>
+"colorscheme space-vim-dark
+
 "emmet 设置
 
 let g:user_emmet_expandabbr_key = '<C-Y>'
