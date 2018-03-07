@@ -108,7 +108,7 @@ Plug 'xml.vim'
 "安装此插件解决macvim下没有加号寄存器的问题。
 Plug 'https://github.com/kana/vim-fakeclip.git'
 
-Plug 'https://github.com/terryma/vim-multiple-cursors.git'
+Plug 'terryma/vim-multiple-cursors'
 
 "snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -227,9 +227,10 @@ autocmd FileType javascript,html set keywordprg=$HOME/.vim/extend/man
 
 autocmd FileType css set keywordprg=$HOME/.vim/extend/cssman
 
-inoremap <C-D> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-D> :call PhpDocSingle()<CR> 
-vnoremap <C-D> :call PhpDocRange()<CR> 
+"php的注释，没什么用还占了我的c-d
+"inoremap <C-D> <ESC>:call PhpDocSingle()<CR>i 
+"nnoremap <C-D> :call PhpDocSingle()<CR> 
+"vnoremap <C-D> :call PhpDocRange()<CR> 
 
 map <F2> <S-K><CR>
 
@@ -308,6 +309,15 @@ map! <C-V> <Esc>"+pa
 map <C-C> "+y
 
 map <C-X> "+x
+"多行光标键位解绑
+let g:multi_cursor_use_default_mapping=0
+" Default mapping
+let g:multi_cursor_next_key='<C-d>'
+let g:multi_cursor_prev_key='<C-p>'
+"let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
+
 
 " 映射全选 ctrl+a
 "map <C-A> ggVG
@@ -318,12 +328,18 @@ map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
 map <C-L> <C-W><C-L>
 " import emacs map
-imap <C-A> <ESC>^i
-imap <C-E> <ESC>$a
-imap <C-K> <ESC>d$i
-map <C-A> ^
-map <C-E> $
-map <C-K> d$
+imap <C-A> <HOME>
+imap <C-E> <END>
+cmap <C-A> <HOME>
+cmap <C-E> <END>
+nmap <C-A> <HOME>
+nmap <C-E> <END>
+"imap <C-A> <ESC>^i
+"imap <C-E> <ESC>$a
+"imap <C-K> <ESC>d$i
+"map <C-A> ^
+"map <C-E> $
+"map <C-K> d$
 " git Command git使用
 nnoremap gca :Gcommit -a -v<CR>
 nnoremap gp  :Gpush <CR>
