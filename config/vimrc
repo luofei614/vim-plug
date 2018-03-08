@@ -139,9 +139,9 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'fatih/vim-go' , { 'do': ':GoInstallBinaries' }
 "git 插件
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
+"Plug 'mhinz/vim-signify'
 "上面的比起下面的更美观且快捷
-"Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 "增强了搜索，需要映射键位
 Plug 'haya14busa/incsearch.vim'
 "v模式下选词 +键扩展 -键缩减
