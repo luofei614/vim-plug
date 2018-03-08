@@ -228,7 +228,7 @@ endif
 "let g:solarized_old_cursor_style=1
 map cbg :call ToggleBG()<CR>
 "colorscheme space-vim-dark
-
+inoremap jk <ESC>
 "emmet 设置
 
 let g:user_emmet_expandabbr_key = '<C-Y>'
@@ -286,9 +286,9 @@ map! <F3> <Esc>:! ctags -R<CR>
 
 "快捷键设置
 
-map <F3> :NERDTreeToggle<CR>
+map <Leader>3 :NERDTreeToggle<CR>
 
-map! <F3> <Esc>:NERDTreeToggle<CR>
+map! <Leader>3 <Esc>:NERDTreeToggle<CR>
 
 map <F12> :TagbarToggle<CR>
 
@@ -385,7 +385,7 @@ augroup vimrc
   autocmd QuickFixCmdPost * botright copen 8
 augroup END
 "F4 操控quickfixc窗口
-noremap <F4> :call asyncrun#quickfix_toggle(8)<cr>
+noremap <Leader>4 :call asyncrun#quickfix_toggle(8)<cr>
 "ctrl+s为保存
 map <C-S> :w<CR>
 inoremap <C-S> <C-O>:w<CR>
