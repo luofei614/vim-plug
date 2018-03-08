@@ -206,7 +206,11 @@ if has('gui_running')
   colorscheme solarized8
 else
   if has('win32') || has('win64')
-    colorscheme apprentice
+    if $COLORTERM == 'truecolor'
+      colorscheme solarized8
+    else
+      colorscheme apprentice
+    endif
   else 
     colorscheme solarized8
   endif
