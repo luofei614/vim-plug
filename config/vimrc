@@ -150,7 +150,10 @@ Plug 'terryma/vim-expand-region'
 "Plug 'liuchengxu/space-vim-dark'
 "终于见到支持cmd的英豪了，也就能用的地步，丑，需要进一步根据环境判断切换
 Plug 'basilgood/Apprentice/'
+"异步执行命令
 Plug 'skywind3000/asyncrun.vim'
+"编译任务插件
+Plug 'skywind3000/vimmake'
 call plug#end()
 
 
@@ -362,11 +365,18 @@ nmap <C-E> <END>
 "map <C-E> $
 "map <C-K> d$
 " git Command git使用
+" gca 开启提交 :wq保存提交
+" gp 推送
 nnoremap gca :Gcommit -a -v<CR>
 "nnoremap gp  :Gpush <CR>
 "git push 这步阻塞太痛苦了，改成异步的
 nnoremap gp :AsyncRun git push origin master<CR>
-
+"当有消息时自动弹出消息窗
+augroup vimrc
+  autocmd QuickFixCmdPost * botright copen 8
+augroup END
+"F4 操控quickfixc窗口
+noremap <F4> :call asyncrun#quickfix_toggle(8)<cr>
 "ctrl+s为保存
 map <C-S> :w<CR>
 inoremap <C-S> <C-O>:w<CR>
