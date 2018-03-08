@@ -198,10 +198,16 @@ set background=dark
   endfunction 
 "设置终端真彩色
 "set termguicolors
-"旧cmd兼容性待定
-let g:solarized_use16 = 1
-"colorscheme solarized8
-colorscheme apprentice
+"let g:solarized_use16 = 1
+if has('gui_running')
+  colorscheme solarized8
+else
+  if has('win32') || has('win64')
+    colorscheme apprentice
+  else 
+    colorscheme solarized8
+  endif
+endif
 "high low normal
 "let g:solarized_visibility='high'
 "high low normal bold
