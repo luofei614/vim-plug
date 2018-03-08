@@ -146,8 +146,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'haya14busa/incsearch.vim'
 "v模式下选词 +键扩展 -键缩减
 Plug 'terryma/vim-expand-region'
-
-Plug 'liuchengxu/space-vim-dark'
+"多个配色多条路，不过在cmd下都不行
+"Plug 'liuchengxu/space-vim-dark'
+"终于见到支持cmd的英豪了，也就能用的地步，丑，需要进一步根据环境判断切换
 Plug 'basilgood/Apprentice/'
 call plug#end()
 
