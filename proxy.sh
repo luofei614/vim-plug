@@ -1,4 +1,5 @@
-#!/bin/bash
+#删掉bash指定，因为termux是prefix格式的
+#/bin/bash
 echo 开始安装依赖
 export http_proxy=http://127.0.0.1:8087/
 export https_proxy=http://127.0.0.1:8087/
