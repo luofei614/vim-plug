@@ -182,7 +182,6 @@ let g:tagbar_width=20
 
 "颜色主题设置
 
-"set t_Co=256
 
 "let g:solarized_termcolors=16
 "两种流行风格的主题
@@ -199,8 +198,6 @@ set background=dark
       set background=dark 
     endif 
   endfunction 
-"设置终端真彩色
-"set termguicolors
 "let g:solarized_use16 = 1
 if has('gui_running')
   colorscheme solarized8
@@ -211,7 +208,15 @@ else
     else
       colorscheme apprentice
     endif
-  else 
+  else
+    "是否支持真彩色
+    if $COLORTERM == 'truecolor'
+      "设置终端真彩色
+      set termguicolors
+    else
+      "设置256色
+      set t_Co=256
+    endif
     colorscheme solarized8
   endif
 endif
