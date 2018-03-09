@@ -13,7 +13,8 @@ lnif() {
 
 echo "Step1: backing up current vim config"
 today=`date +%Y%m%d`
-#for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc $HOME/.vimrc.bundles; do [ -e $i  ] && [ ! -L $i  ] && mv $i $i.$today; done
+for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc $HOME/.vimrc.bundles; do [ -e $i  ] && [ ! -L $i  ] && mv $i $i.$today; done
+#原有配置还是要删除或者备份的不然会影响到后续的安装
 for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc $HOME/.eslintrc.json /Users/lynn/.eslintrc.js $HOME/.npmrc $HOME/.tern-config $HOME/.vimrc.bundles; do [ -L $i  ] && unlink $i ; done
 
 
