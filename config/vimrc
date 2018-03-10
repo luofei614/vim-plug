@@ -470,7 +470,10 @@ set expandtab
 "加快速度
 "set synmaxcol=200
 set ttyfast " u got a fast terminal
-set ttyscroll=3
+if has('nvim')
+else
+  set ttyscroll=3
+endif
 set lazyredraw " to avoid scrolling problems
 "删除键
 set backspace=eol,start,indent
