@@ -21,14 +21,18 @@ IF NOT EXIST "%APP_PATH%" (
 )
 call rm "%HOME%\.vimrc"
 call rm "%HOME%\_vimrc" 
+call rm "%HOME%\AppData\Local\nvim\init.vim"
 call rm "%HOME%\.eslintrc.json"
 call rm "%HOME%\.eslintrc.js"
 call rm "%HOME%\.npmrc"
 call rm "%HOME%\.tern-config" 
+call rmdir "%HOME%\AppData\Local\nvim"
 call rmdir "%HOME%\.vim" 
 
 call mklink "%HOME%\.vimrc" "%APP_PATH%\config\vimrc"
 call mklink "%HOME%\_vimrc" "%APP_PATH%\config\vimrc"
+call mklink /J "%HOME%\AppData\Local\nvim" "%APP_PATH%\"
+call mklink "%HOME%\AppData\Local\nvim\init.vim" "%APP_PATH%\config\vimrc"
 call mklink "%HOME%\.eslintrc.json" "%APP_PATH%\config\eslintrc.json"
 call mklink "%HOME%\.tern-config" "%APP_PATH%\config\tern-config"
 ::不再覆盖npmrc call mklink "%HOME%\.npmrc" "%APP_PATH%\config\npmrc"
