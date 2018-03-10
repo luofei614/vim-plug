@@ -471,7 +471,11 @@ set expandtab
 "set synmaxcol=200
 set ttyfast " u got a fast terminal
 if has('nvim')
-  set termguicolors
+  if has('win32') || has('win64')
+    "windows命令行时候必须有termguicolor色彩，但同时在xshellssh中开启这个色彩就不对了
+    set termguicolors
+  else
+  endif
   colorscheme solarized8
 else
   set ttyscroll=3
