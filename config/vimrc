@@ -471,6 +471,8 @@ set expandtab
 "set synmaxcol=200
 set ttyfast " u got a fast terminal
 if has('nvim')
+  set termguicolors
+  colorscheme solarized8
 else
   set ttyscroll=3
 endif
