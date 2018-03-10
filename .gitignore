@@ -1,3 +1,4 @@
 plugged/
 node_modules/
 *.swp
+init.vim
