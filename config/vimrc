@@ -206,6 +206,7 @@ else
     if $COLORTERM == 'truecolor'
       colorscheme solarized8
     else
+    "其实这里还有一个情况。当在win10从商店下好ubuntu子系统后，命令行就支持真彩色了
       colorscheme apprentice
     endif
   else
@@ -215,6 +216,7 @@ else
       set termguicolors
     else
       "设置256色
+      "似乎windows不安装ubuntu前是色不全，安装后色全了
       set t_Co=256
     endif
     colorscheme solarized8
