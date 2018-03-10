@@ -21,7 +21,7 @@ for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc $HOME/.eslintrc.json /Users/lynn/
 echo "Step2: setting up symlinks"
 lnif $CURRENT_DIR/config/vimrc $HOME/.vimrc
 lnif "$CURRENT_DIR/" "$HOME/.config/nvim"
-lnif $CURRENT_DIR/cinfig/vimrc $HOME/.config/nvim/init.vim
+lnif $CURRENT_DIR/config/vimrc $HOME/.config/nvim/init.vim
 lnif "$CURRENT_DIR/" "$HOME/.vim"
 #lnif $CURRENT_DIR/config/eslintrc.json $HOME/.eslintrc.json
 lnif $CURRENT_DIR/config/eslintrc.js $HOME/.eslintrc.js
