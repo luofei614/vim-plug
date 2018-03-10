@@ -202,25 +202,28 @@ set background=dark
 if has('gui_running')
   colorscheme solarized8
 else
-  if has('win32') || has('win64')
-    if $COLORTERM == 'truecolor'
-      colorscheme solarized8
-    else
+  "if has('win32') || has('win64')
+    "if $COLORTERM == 'truecolor'
+    "  colorscheme solarized8
+    "else
     "其实这里还有一个情况。当在win10从商店下好ubuntu子系统后，命令行就支持真彩色了
-      colorscheme apprentice
-    endif
-  else
+    "发现都不是，只要设置win下都真彩色就行，不用丑的次级配色了，可能支持更早的系统
+    "  colorscheme apprentice
+    "endif
+  "else
     "是否支持真彩色
     if $COLORTERM == 'truecolor'
       "设置终端真彩色
       set termguicolors
-    else
+    elseif has('win32') || has('win64')
+      set termguicolors
       "设置256色
       "似乎windows不安装ubuntu前是色不全，安装后色全了
+    else
       set t_Co=256
     endif
     colorscheme solarized8
-  endif
+  "endif
 endif
 "high low normal
 "let g:solarized_visibility='high'
