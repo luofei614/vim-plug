@@ -13,9 +13,10 @@ while getopts 'p:c' OPT; do
 done
 shift $(($OPTIND - 1))
 echo 开始安装依赖
-export http_proxy=http://127.0.0.1:${PORT}
-export https_proxy=http://127.0.0.1:/${PORT}
-git config http.proxy http://127.0.0.1:${PORT}
+echo ${PORT}
+export http_proxy=http://127.0.0.1:${PORT}/
+export https_proxy=http://127.0.0.1:${PORT}/
+git config http.proxy http://127.0.0.1:${PORT}/
 go get -u github.com/klauspost/asmfmt/cmd/asmfmt
 go get -u github.com/derekparker/delve/cmd/dlv
 go get -u github.com/kisielk/errcheck
