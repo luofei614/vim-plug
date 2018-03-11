@@ -1,10 +1,13 @@
 #删掉bash指定，因为termux是prefix格式的
 #!/bin/bash
 PORT=8087
-while getopts 'p:c' OPT; do
+HOST=127.0.0.1
+while getopts 'p:h:c' OPT; do
   case $OPT in
     p)
       PORT="$OPTARG";;
+    h)
+      HOST="$OPTARG";;
     c)
       Client="y";;
     ?)
@@ -13,10 +16,11 @@ while getopts 'p:c' OPT; do
 done
 shift $(($OPTIND - 1))
 echo 开始安装依赖
+echo ${HOST}
 echo ${PORT}
-export http_proxy=http://127.0.0.1:${PORT}/
-export https_proxy=http://127.0.0.1:${PORT}/
-git config http.proxy http://127.0.0.1:${PORT}/
+export http_proxy=http://${HOST}:${PORT}/
+export https_proxy=http://${HOST}:${PORT}/
+git config http.proxy http://${HOST}:${PORT}/
 go get -u github.com/klauspost/asmfmt/cmd/asmfmt
 go get -u github.com/derekparker/delve/cmd/dlv
 go get -u github.com/kisielk/errcheck
