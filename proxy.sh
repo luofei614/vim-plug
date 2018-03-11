@@ -1,6 +1,6 @@
 #删掉bash指定，因为termux是prefix格式的
 #!/bin/bash
-PORT=8087
+PORT=10808
 HOST=127.0.0.1
 while getopts 'p:h:c' OPT; do
   case $OPT in
