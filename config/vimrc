@@ -33,8 +33,8 @@ endif
 " }
 
 call plug#begin('$HOME/.vim/plugged')
-let mapleader = ','
-let g:mapleader = ','
+let mapleader = ' '
+let g:mapleader = ' '
 " Make sure you use single quotes
 Plug 'junegunn/vim-easy-align'
 " Plugin options
