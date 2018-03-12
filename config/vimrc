@@ -154,6 +154,7 @@ Plug 'basilgood/Apprentice/'
 Plug 'skywind3000/asyncrun.vim'
 "编译任务插件
 Plug 'skywind3000/vimmake'
+Plug 'hsanson/vim-android'
 call plug#end()
 
 
@@ -361,6 +362,8 @@ let g:multi_cursor_quit_key='<Esc>'
 "map <C-A> ggVG
 "map! <C-A> <Esc>ggVG
 "多窗口切换
+"ctrl是修饰键可以按住不动的使用
+"leader只生效一次，需要不断重新敲击
 map <Leader>h <C-W><C-H>
 map <Leader>j <C-W><C-J>
 map <Leader>k <C-W><C-K>
