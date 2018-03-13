@@ -51,16 +51,6 @@ Plug 'Tagbar'
 "zencoding 改名为了 Emmet
 Plug 'https://github.com/luofei614/Emmet.vim'
 
-Plug 'L9'
-
-Plug 'FuzzyFinder'
-"快速浏览文件，FuzzyFinder 也能快速浏览文件， 但是如果项目文件多会很慢
-"如果系统升级可以需要运行 gem update --system, do中的命令可能需要手动运行 
-"Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make','on':'CommandT'} 
-
-
-" Plugin outside ~/.vim/plugged with post-update hook
-" 下面这个插件可取代Command-T 但是现在暂时不支持目录忽略，所以先暂时不用
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'WebAPI.vim'
 
@@ -74,7 +64,7 @@ Plug 'tomasr/molokai'
 "找来个支持truecolor的
 Plug 'lifepillar/vim-solarized8'
 
-Plug 'PDV--phpDocumentor-for-Vim'
+"Plug 'PDV--phpDocumentor-for-Vim'
 
 Plug 'https://github.com/luofei614/html5css3.git'
 
@@ -105,10 +95,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'https://github.com/bonsaiben/bootstrap-snippets.git'
 
-Plug 'phpunit'
-
-"快速跳转到字符
-Plug 'EasyMotion'
+"Plug 'phpunit'
 
 Plug 'https://github.com/bling/vim-airline.git'
 
@@ -149,7 +136,7 @@ Plug 'terryma/vim-expand-region'
 "多个配色多条路，不过在cmd下都不行
 "Plug 'liuchengxu/space-vim-dark'
 "终于见到支持cmd的英豪了，也就能用的地步，丑，需要进一步根据环境判断切换
-Plug 'basilgood/Apprentice/'
+"Plug 'basilgood/Apprentice/'
 "异步执行命令
 Plug 'skywind3000/asyncrun.vim'
 "编译任务插件
@@ -235,6 +222,8 @@ endif
 map cbg :call ToggleBG()<CR>
 "colorscheme space-vim-dark
 inoremap jk <ESC>
+map jk  <ESC>
+cmap jk <ESC>
 "emmet 设置
 
 let g:user_emmet_expandabbr_key = '<C-Y>'
