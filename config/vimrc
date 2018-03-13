@@ -532,7 +532,7 @@ set scrolloff=9    " Set  lines to the cursor - when moving vertically using j/k
 "npm i -g eslint eslint-config-airbnb babel-eslint eslint-plugin-react
 "eslint-plugin-react-native
 
-"
+"test
 "快捷提交
 nmap <leader>p <Plug>(Gpush)
 "F5 刷新编辑器
