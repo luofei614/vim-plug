@@ -535,6 +535,13 @@ nmap <leader>p <Plug>(Gpush)
 "F5 刷新编辑器
 nmap <F5> :source% <CR> 
 
+augroup autoupdate
+  autocmd VimEnter * :AsyncRun -post=source\ $HOME/.vimrc cd $HOME/vim-plug && git pull
+  "没法在async中用vim自己的source
+  "没法autocmd响应事件
+  autocmd User AsyncRunStop *:source $HOME/.vimrc
+augroup END
+
 augroup gocmd
   autocmd FileType go nmap <leader>t <Plug>(go-test)
   autocmd FileType go nmap <leader>b <Plug>(go-build)
