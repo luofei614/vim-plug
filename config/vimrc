@@ -259,12 +259,11 @@ autocmd FileType javascript set dictionary=$HOME/.vim/extend/javascript.dict
 autocmd FileType html set dictionary=$HOME/.vim/extend/html.dict
 
 "查找手册
-
-autocmd FileType php set keywordprg=$HOME/.vim/extend/phpman
-
-autocmd FileType javascript,html set keywordprg=$HOME/.vim/extend/man
-
-autocmd FileType css set keywordprg=$HOME/.vim/extend/cssman
+augroup man
+  autocmd FileType php set keywordprg=$HOME/.vim/extend/phpman
+  autocmd FileType javascript,html set keywordprg=$HOME/.vim/extend/man
+  autocmd FileType css set keywordprg=$HOME/.vim/extend/cssman
+augroup END
 
 "php的注释，没什么用还占了我的c-d
 "inoremap <C-D> <ESC>:call PhpDocSingle()<CR>i 
@@ -547,9 +546,11 @@ nmap <leader>p <Plug>(Gpush)
 "F5 刷新编辑器
 nmap <F5> :source% <CR> 
 
-autocmd FileType go nmap <leader>t <Plug>(go-test)
-autocmd FileType go nmap <leader>b <Plug>(go-build)
-autocmd FileType go nmap <leader>r <Plug>(go-run)
+augroup gocmd
+  autocmd FileType go nmap <leader>t <Plug>(go-test)
+  autocmd FileType go nmap <leader>b <Plug>(go-build)
+  autocmd FileType go nmap <leader>r <Plug>(go-run)
+augroup END
 
 "状态栏改变
 "set statusline+=%#warningmsg#
