@@ -543,6 +543,7 @@ function! Fuck()
   :cd $HOME/vim-plug
   :!git pull
   source $MYVIMRC
+  echom "已更新"
 endfunction
 endif
 augroup autoupdate
