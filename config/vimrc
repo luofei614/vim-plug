@@ -541,10 +541,13 @@ nmap <F5> :source% <CR>
 if !exists("*Fuck")
 function! Fuck()
   :cd $HOME/vim-plug
-  :!git pull
+  :!git pull <CR>
+  "上面的回车是没用的，还是得进回车
   source $MYVIMRC
   echom "已更新"
 endfunction
+else
+  echom "updated"
 endif
 augroup autoupdate
 "-post still  can't run source
