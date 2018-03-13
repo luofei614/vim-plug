@@ -222,7 +222,10 @@ endif
 map cbg :call ToggleBG()<CR>
 "colorscheme space-vim-dark
 inoremap jk <ESC>
-map jk  <ESC>
+"删除了半天的插件后得出的结论
+"普通模式会对j进行一个判断，判断后面没跟k才会输出j，结果就造成了看上去往下走的时候最后一个键卡顿的效果
+"map jk  <ESC>
+"命令模式还是可以用
 cmap jk <ESC>
 "emmet 设置
 
