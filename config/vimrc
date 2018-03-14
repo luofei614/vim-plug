@@ -541,10 +541,10 @@ nmap <F5> :source% <CR>
 if !exists("*Fuck")
 function! Fuck()
   :cd $HOME/vim-plug
-  "back to before dir
-  :cd -
   "想尝试通过--git-dir 或者 -C的方式直接pull，似乎不行
   :!git pull
+  "back to before dir
+  :cd -
   "上面的回车是没用的，还是得进回车
   source $MYVIMRC
   echom "已更新"
