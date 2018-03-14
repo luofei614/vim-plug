@@ -561,13 +561,35 @@ augroup autoupdate
   "nested 代表嵌套后面的命令
 
   "autocmd VimEnter * :AsyncRun -post=call\ Fuck() cd $HOME/vim-plug && git pull
-  autocmd VimEnter * nested call Fuck()
+  "目前唯一可以用的
+  "-------------------------------------------------------
+  "autocmd VimEnter * nested call Fuck()
+  autocmd VimEnter * nested call Update()
+  "-------------------------------------------------------------------------
   "没法在async中用vim自己的source
   "没法autocmd响应事件
   "autocmd User AsyncRunStop *:source $HOME/.vimrc
   "autocmd User AsyncRunStop call s:fuck()
 augroup END
-
+"vimscript中用.而不是+链接字符串
+if !exists("*Update")
+  func Update()
+    let job=job_start("git -C " . $HOME . "/vim-plug pull",{"out_cb":"MyHandler","err_cb":"ErrHandler"})
+  endfunc
+else
+  echom "updated"
+endif
+if !exists("*ErrHandler")
+func ErrHandler(channel,msg)
+  echo "Err" . a:msg
+endfunc
+endif
+if !exists("*MyHandler")
+func MyHandler(channel,msg)
+  echo "Suc" . a:msg
+  source $MYVIMRC
+endfunc
+endif
 augroup gocmd
   autocmd FileType go nmap <leader>t <Plug>(go-test)
   autocmd FileType go nmap <leader>b <Plug>(go-build)
