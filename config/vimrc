@@ -283,9 +283,9 @@ map! <F3> <Esc>:! ctags -R<CR>
 
 "快捷键设置
 
-map <Leader>3 :NERDTreeToggle<CR>
+nnoremap <Leader>3 :NERDTreeToggle<CR>
 
-map! <Leader>3 <Esc>:NERDTreeToggle<CR>
+nnoremap! <Leader>3 <Esc>:NERDTreeToggle<CR>
 
 map <F12> :TagbarToggle<CR>
 
@@ -353,14 +353,14 @@ let g:multi_cursor_quit_key='<Esc>'
 "map <C-A> ggVG
 "map! <C-A> <Esc>ggVG
 "快速关闭单个窗口
-map <leader>q <C-W>q
+nmap <leader>q <C-W>q
 "多窗口切换
 "ctrl是修饰键可以按住不动的使用
 "leader只生效一次，需要不断重新敲击
-map <Leader>h <C-W><C-H>
-map <Leader>j <C-W><C-J>
-map <Leader>k <C-W><C-K>
-map <Leader>l <C-W><C-L>
+nmap <Leader>h <C-W><C-H>
+nmap <Leader>j <C-W><C-J>
+nmap <Leader>k <C-W><C-K>
+nmap <Leader>l <C-W><C-L>
 " import emacs map
 imap <C-A> <HOME>
 imap <C-E> <END>
