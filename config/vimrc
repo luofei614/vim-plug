@@ -352,6 +352,8 @@ let g:multi_cursor_quit_key='<Esc>'
 " 映射全选 ctrl+a
 "map <C-A> ggVG
 "map! <C-A> <Esc>ggVG
+"快速关闭单个窗口
+map <leader>q <C-W>q
 "多窗口切换
 "ctrl是修饰键可以按住不动的使用
 "leader只生效一次，需要不断重新敲击
