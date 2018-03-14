@@ -283,9 +283,11 @@ map! <F3> <Esc>:! ctags -R<CR>
 
 "快捷键设置
 
-nnoremap <Leader>3 :NERDTreeToggle<CR>
-
-nnoremap! <Leader>3 <Esc>:NERDTreeToggle<CR>
+nmap <Leader>3 :NERDTreeToggle<CR>
+"vim中的map中的!代表了插入模式和命令模式
+"而在后两者的模式的输入中对空格本身的判断延时会影响使用
+"所以去掉
+"nmap! <Leader>3 <Esc>:NERDTreeToggle<CR>
 
 map <F12> :TagbarToggle<CR>
 
