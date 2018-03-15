@@ -595,8 +595,17 @@ if !exists("*Update")
     let git_pull_job=job_start("git -C " . $HOME . "/vim-plug pull",{"out_cb":"SourceHandler","err_cb":"ErrHandler"})
   endfunc
 else
+  "多个异步事件会引发问题，所以去掉
+  "let plug_pull_job=job_start("vim +PlugInstall!",{"callback":"PlugHandler"})
+  "AsyncRun vim +PlugInstall!
   echom "updated"
 endif
+if !exists("*PlugHandler")
+func PlugHandler(channel,msg)
+  echo "Plug" . a:msg
+endfunc
+endif
+
 if !exists("*ErrHandler")
 func ErrHandler(channel,msg)
   echo "Err" . a:msg
