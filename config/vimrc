@@ -152,6 +152,7 @@ Plug 'chemzqm/wxapp.vim'
 "Plug 'ctrlpvim/ctrlp.vim'
 "用不了ack的命令，不知道为什么
 "Plug 'mileszs/ack.vim'
+Plug 'posva/vim-vue'
 call plug#end()
 
 

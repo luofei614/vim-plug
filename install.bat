@@ -55,4 +55,4 @@ call curl -fLo %USERPROFILE%/.vim/autoload/plug.vim --create-dirs https://raw.gi
 call vim +PlugInstall! +PlugClean! +qall
 call proxy.bat
 call vim -c "GoInstallBinaries" -c "qa"
-call npm i -g eslint eslint_d eslint-plugin-babel eslint-plugin-react eslint-plugin-react-native babel-eslint eslint-config-airbnb  --registry=http://registry.npm.taobao.org
+call npm i -g eslint eslint-plugin-vue eslint_d eslint-plugin-babel eslint-plugin-react eslint-plugin-react-native babel-eslint eslint-config-airbnb  --registry=http://registry.npm.taobao.org
