@@ -309,11 +309,10 @@ map! <F12> <Esc>:TagbarToggle<CR>
 let g:CommandTAcceptSelectionMap = '<space>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
 
-" 用FZF 查找文件 
-" 设置查找时排除的目录
-let $FZF_DEFAULT_COMMAND  = 'find . -type f ! -path "./node_modules/*" ! -path "./bower_components/*" ! -path "./.git/*" ! -path "*.swp"'
 
-nnoremap <Leader>f :Files<CR>
+"silent是指执行后面的命令时不显示在命令栏
+nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
 "map <C-P> :tabnew<CR>:FZF<CR>
 "map!<C-P> <ESc>:w<CR> :tabnew<CR>:FZF<CR>
 
