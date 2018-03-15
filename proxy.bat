@@ -28,5 +28,10 @@ go get %update% github.com/junegunn/fzf
 cd %USERPROFILE%/.fzf/
 go build
 mv .fzf.exe %USERPROFILE%/.fzf/bin/fzf.exe
+
+::tools
+echo 如果这一步不行得手动去下载放在能执行的目录
+call curl -fLo %USERPROFILE%/Downloads/ag.zip https://github.com/k-takata/the_silver_searcher-win32/releases/download/2018-01-25%2F2.1.0-28-g4aa9f05/ag-2018-01-25_2.1.0-28-g4aa9f05-x64.zip
+call unzip %USERPROFILE%/Downloads/ag.zip
 EXIT /B
 ::goto :eof和 EXIT /B 都能返回到之前的call里 但是是不会返回到start里

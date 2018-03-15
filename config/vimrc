@@ -315,7 +315,7 @@ let g:CommandTAcceptSelectionTabMap = '<CR>'
 
 "silent是指执行后面的命令时不显示在命令栏
 nnoremap <silent> <Leader>f :Files<CR>
-nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>g :Ag<CR>
 "map <C-P> :tabnew<CR>:FZF<CR>
 "map!<C-P> <ESc>:w<CR> :tabnew<CR>:FZF<CR>
 
