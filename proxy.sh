@@ -39,7 +39,3 @@ go get -u github.com/josharian/impl
 go get -u github.com/dominikh/go-tools/cmd/keyify
 go get -u github.com/fatih/motion
 
-#tools
-sudo apt-get install silversearcher-ag
-sudo yum install the_silver_searcher
-brew install the_silver_searcher
