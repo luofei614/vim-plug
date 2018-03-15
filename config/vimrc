@@ -51,7 +51,11 @@ Plug 'Tagbar'
 "zencoding 改名为了 Emmet
 Plug 'https://github.com/luofei614/Emmet.vim'
 "模糊搜索软件
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+if has('win32') || has('win64')
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'go build && mv ./main.exe ./bin/fzf.exe' }
+else
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+endif
 Plug 'junegunn/fzf.vim'
 Plug 'WebAPI.vim'
 
