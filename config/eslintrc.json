@@ -1,4 +1,11 @@
 {
+  "globals":{
+    "App":true,
+    "Page":true,
+    "getApp":true,
+    "wx":true,
+    "getCurrentPages":true
+  },
   "env": {
     "browser": true,
     "es6": true,

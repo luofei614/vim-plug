@@ -50,8 +50,9 @@ Plug 'Tagbar'
 
 "zencoding 改名为了 Emmet
 Plug 'https://github.com/luofei614/Emmet.vim'
-
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+"模糊搜索软件
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'WebAPI.vim'
 
 Plug 'Gist.vim'
@@ -121,7 +122,7 @@ Plug 'alvan/vim-closetag'
 "beauty
 Plug 'vim-scripts/matchit.zip'
 "tern js 补全
-"Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
+Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
 "Go 插件
 Plug 'fatih/vim-go' , { 'do': ':GoInstallBinaries' }
 "git 插件
@@ -142,6 +143,8 @@ Plug 'skywind3000/asyncrun.vim'
 "编译任务插件
 Plug 'skywind3000/vimmake'
 Plug 'hsanson/vim-android'
+Plug 'chemzqm/wxapp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 
@@ -304,7 +307,9 @@ let g:CommandTAcceptSelectionTabMap = '<CR>'
 
 " 用FZF 查找文件 
 " 设置查找时排除的目录
-":let $FZF_DEFAULT_COMMAND  = 'find . -type f ! -path "./node_modules/*" ! -path "./bower_components/*" ! -path "./.git/*" ! -path "*.swp"'
+let $FZF_DEFAULT_COMMAND  = 'find . -type f ! -path "./node_modules/*" ! -path "./bower_components/*" ! -path "./.git/*" ! -path "*.swp"'
+
+nnoremap <Leader>f :Files<CR>
 "map <C-P> :tabnew<CR>:FZF<CR>
 "map!<C-P> <ESc>:w<CR> :tabnew<CR>:FZF<CR>
 
