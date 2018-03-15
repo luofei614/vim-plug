@@ -41,6 +41,8 @@ call mklink /J "%HOME%\.vim" "%APP_PATH%\"
 IF NOT EXIST "%APP_PATH%\plugged" (
     call mkdir "%APP_PATH%\plugged"
 )
+::下载vim-plug
+call curl -fLo %USERPROFILE%/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ::IF NOT EXIST "%HOME%/.vim/bundle/vundle" (
 ::    call git clone https://github.com/gmarik/vundle.git "%HOME%/.vim/bundle/vundle"

@@ -25,6 +25,8 @@ lnif "$CURRENT_DIR/" "$HOME/.vim"
 #lnif $CURRENT_DIR/config/eslintrc.json $HOME/.eslintrc.json
 lnif $CURRENT_DIR/config/eslintrc.js $HOME/.eslintrc.js
 lnif $CURRENT_DIR/config/tern-config $HOME/.tern-config
+#下载vim-plug
+call curl -fLo %USERPROFILE%/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 #不能乱动.npmrc
 #lnif $CURRENT_DIR/config/npmrc $HOME/.npmrc
 
