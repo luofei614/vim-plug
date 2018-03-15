@@ -541,6 +541,8 @@ set scrolloff=9    " Set  lines to the cursor - when moving vertically using j/k
 nmap <leader>p <Plug>(Gpush)
 "F5 刷新编辑器
 nmap <F5> :source% <CR> 
+"leader+5 编辑vimrc
+map <leader>5 :edit $MYVIMRC<CR>
 "source vimrc的时候会重新定义一下fuck，所以要想不触发错误，得在定义时加入判断
 if !exists("*Fuck")
 function! Fuck()
@@ -565,8 +567,11 @@ augroup autoupdate
   "autocmd VimEnter * :AsyncRun -post=call\ Fuck() cd $HOME/vim-plug && git pull
   "目前唯一可以用的
   "-------------------------------------------------------
-  "autocmd VimEnter * nested call Fuck()
-  autocmd VimEnter * nested call Update()
+  if has("job")
+    autocmd VimEnter * nested call Update()
+  else
+    autocmd VimEnter * nested call Fuck()
+  endif
   "-------------------------------------------------------------------------
   "没法在async中用vim自己的source
   "没法autocmd响应事件
