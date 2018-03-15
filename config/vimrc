@@ -148,7 +148,10 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'skywind3000/vimmake'
 Plug 'hsanson/vim-android'
 Plug 'chemzqm/wxapp.vim'
-Plug 'ctrlpvim/ctrlp.vim'
+"太慢了不准备用了
+"Plug 'ctrlpvim/ctrlp.vim'
+"用不了ack的命令，不知道为什么
+"Plug 'mileszs/ack.vim'
 call plug#end()
 
 
