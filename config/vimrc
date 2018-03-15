@@ -40,12 +40,12 @@ Plug 'junegunn/vim-easy-align'
 " Plugin options
 Plug 'nsf/gocode', { 'rtp': 'vim' }
 
-Plug 'AutoComplPop'
+Plug 'vim-scripts/AutoComplPop'
 "浏览树
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "浏览树显示git状态插件
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'Tagbar'
+Plug 'vim-scripts/Tagbar'
 "Bundle 'minibufexpl.vim'
 
 "zencoding 改名为了 Emmet
@@ -57,9 +57,9 @@ else
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 endif
 Plug 'junegunn/fzf.vim'
-Plug 'WebAPI.vim'
+Plug 'vim-scripts/WebAPI.vim'
 
-Plug 'Gist.vim'
+Plug 'vim-scripts/Gist.vim'
 
 Plug 'tomasr/molokai'
 "七年没更新的配色能用个鬼
@@ -84,11 +84,11 @@ Plug 'pangloss/vim-javascript'
 Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
 
 
-Plug 'Mark'
+Plug 'vim-scripts/Mark'
 "css私有前缀
-Plug 'prefixer.vim'
+Plug 'vim-scripts/prefixer.vim'
 "能缩减HTML代码
-Plug 'xml.vim'
+Plug 'vim-scripts/xml.vim'
 "安装此插件解决macvim下没有加号寄存器的问题。
 Plug 'https://github.com/kana/vim-fakeclip.git'
 
