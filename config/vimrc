@@ -153,6 +153,10 @@ Plug 'chemzqm/wxapp.vim'
 "用不了ack的命令，不知道为什么
 "Plug 'mileszs/ack.vim'
 Plug 'posva/vim-vue'
+"微软typerscript支持，高亮
+Plug 'leafgarland/typescript-vim'
+"ts的功能插件
+Plug 'Quramy/tsuquyomi'
 call plug#end()
 
 
