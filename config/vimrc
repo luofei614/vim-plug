@@ -152,6 +152,11 @@ Plug 'chemzqm/wxapp.vim'
 "Plug 'ctrlpvim/ctrlp.vim'
 "用不了ack的命令，不知道为什么
 "Plug 'mileszs/ack.vim'
+Plug 'posva/vim-vue'
+"微软typerscript支持，高亮
+Plug 'leafgarland/typescript-vim'
+"ts的功能插件
+Plug 'Quramy/tsuquyomi'
 call plug#end()
 
 
@@ -393,7 +398,7 @@ nmap <C-E> <END>
 nnoremap gca :Gcommit -a -v<CR>
 "nnoremap gp  :Gpush <CR>
 "git push 这步阻塞太痛苦了，改成异步的
-nnoremap gpl :AsyncRun git pull<CR>
+nnoremap gl :AsyncRun git pull<CR>
 nnoremap gp :AsyncRun git push<CR>
 "当有消息时自动弹出消息窗
 augroup vimrc
@@ -615,8 +620,17 @@ if !exists("*Update")
     let git_pull_job=job_start("git -C " . $HOME . "/vim-plug pull",{"out_cb":"SourceHandler","err_cb":"ErrHandler"})
   endfunc
 else
+  "多个异步事件会引发问题，所以去掉
+  "let plug_pull_job=job_start("vim +PlugInstall!",{"callback":"PlugHandler"})
+  "AsyncRun vim +PlugInstall!
   echom "updated"
 endif
+if !exists("*PlugHandler")
+func PlugHandler(channel,msg)
+  echo "Plug" . a:msg
+endfunc
+endif
+
 if !exists("*ErrHandler")
 func ErrHandler(channel,msg)
   echo "Err" . a:msg
