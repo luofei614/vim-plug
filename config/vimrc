@@ -580,6 +580,26 @@ augroup autoupdate
   "-------------------------------------------------------
   if has("job")
     autocmd VimEnter * nested call Update()
+  elseif has("nvim")
+    function! s:OnEvent(job_id, data, event) dict
+      echom "nvim jobstart"
+      if a:event == 'stdout'
+        let str = self.shell.' stdout: '.join(a:data)
+      elseif a:event == 'stderr'
+        let str = self.shell.' stderr: '.join(a:data)
+      else
+        let str = self.shell.' exited'
+      endif
+
+      call append(line('$'), str)
+    endfunction
+    let s:callbacks = {
+    \ 'on_stdout': function('s:OnEvent'),
+    \ 'on_stderr': function('s:OnEvent'),
+    \ 'on_exit': function('s:OnEvent')
+    \ }
+    "let job1 = jobstart(['bash'], extend({'shell': 'shell 1'}, s:callbacks))
+    let job2 = jobstart(['bash', '-c', "git -C " . $HOME . "/vim-plug pull"], extend({'shell': 'shell 2'}, s:callbacks))
   else
     autocmd VimEnter * nested call Fuck()
   endif
@@ -664,3 +684,7 @@ let tern_show_signature_in_pum = 1
 let tern_show_argument_hints = 'on_hold'
 autocmd FileType javascript setlocal omnifunc=tern#Complete
 autocmd FileType javascript nnoremap <leader>d :TernDef<CR>
+shell 2 stderr: fatal: unable to access 'http://github.com/sherylynn/vim-plug/': Failed to connect to 127.0.0.1 port 10808: Connection refused 
+shell 2 stderr: 
+shell 2 stdout: 
+shell 2 exited
