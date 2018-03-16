@@ -70,8 +70,8 @@ Plug 'tomasr/molokai'
 Plug 'lifepillar/vim-solarized8'
 
 "Plug 'PDV--phpDocumentor-for-Vim'
-
-Plug 'https://github.com/luofei614/html5css3.git'
+"注释看看会不会影响到markdown
+"Plug 'https://github.com/luofei614/html5css3.git'
 
 "bookmark  mm 添加书签,  mn 移动书签  mp 移动到前一个书签  ma 删除所有书签
 Plug 'MattesGroeger/vim-bookmarks'
@@ -157,6 +157,10 @@ Plug 'posva/vim-vue'
 Plug 'leafgarland/typescript-vim'
 "ts的功能插件
 Plug 'Quramy/tsuquyomi'
+"彩虹括号
+Plug 'luochen1990/rainbow'
+"markdown
+Plug 'tpope/vim-markdown'
 call plug#end()
 
 
@@ -182,7 +186,8 @@ let g:acp_behaviorKeywordCommand="\<C-n>"
 
 let g:NERDTreeWinSize = 20
 let g:tagbar_width=20
-
+"彩虹括号开启
+let g:rainbow_active = 1  
 "颜色主题设置
 
 
