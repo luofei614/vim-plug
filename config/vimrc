@@ -161,6 +161,10 @@ Plug 'Quramy/tsuquyomi'
 Plug 'luochen1990/rainbow'
 "markdown
 Plug 'tpope/vim-markdown'
+"formate js
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+"中文排版规范化用法  :PanGu
+Plug 'hotoo/pangu.vim'
 call plug#end()
 
 
