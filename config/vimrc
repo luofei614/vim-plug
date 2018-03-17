@@ -186,6 +186,8 @@ let g:acp_behaviorKeywordCommand="\<C-n>"
 
 let g:NERDTreeWinSize = 20
 let g:tagbar_width=20
+"自动打开nerdtree
+"autocmd vimenter * NERDTree
 "彩虹括号开启
 let g:rainbow_active = 1  
 "颜色主题设置
@@ -562,8 +564,14 @@ set scrolloff=9    " Set  lines to the cursor - when moving vertically using j/k
 nmap <leader>p <Plug>(Gpush)
 "F5 刷新编辑器
 nmap <F5> :source% <CR> 
+if !exists("*Edit_vim_plug")
+func Edit_vim_plug()
+  :cd $HOME/vim-plug
+  :edit $HOME/vim-plug/config/vimrc
+endfunc
+endif
 "leader+5 编辑vimrc
-map <leader>5 :edit $MYVIMRC<CR>
+map <leader>5 :call Edit_vim_plug()<CR>
 "source vimrc的时候会重新定义一下fuck，所以要想不触发错误，得在定义时加入判断
 if !exists("*Fuck")
 function! Fuck()
