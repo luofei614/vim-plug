@@ -679,7 +679,7 @@ augroup jscmd
   autocmd FileType javascript nmap <leader>t :AsyncRun npm test<CR>
   autocmd FileType javascript nmap <leader>b :AsyncRun npm run build<CR>
   autocmd FileType javascript nmap <leader>r :AsyncRun npm run start<CR>
-  autocmd FileType javascript nmap <leader>d :Asyncrun npm run dev<CR>
+  autocmd FileType javascript nmap <leader>d :AsyncRun npm run dev<CR>
 augroup END
 
 
