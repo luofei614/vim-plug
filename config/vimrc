@@ -675,6 +675,13 @@ augroup gocmd
   autocmd FileType go nmap <leader>b <Plug>(go-build)
   autocmd FileType go nmap <leader>r <Plug>(go-run)
 augroup END
+augroup jscmd
+  autocmd FileType javascript nmap <leader>t :AsyncRun npm test<CR>
+  autocmd FileType javascript nmap <leader>b :AsyncRun npm run build<CR>
+  autocmd FileType javascript nmap <leader>r :AsyncRun npm run start<CR>
+  autocmd FileType javascript nmap <leader>d :asyncrun npm run dev<CR>
+augroup END
+
 
 "状态栏改变
 "set statusline+=%#warningmsg#
