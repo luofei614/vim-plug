@@ -7,7 +7,8 @@ set nocompatible        " Must be first line
 " across (heterogeneous) systems easier.
 if has('win32') || has('win64')
   set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-
+  "禁用win下alt快捷键,只在gui下生效，不实用
+  set winaltkeys=no
   " Be nice and check for multi_byte even if the config requires
   " multi_byte support most of the time
   if has("multi_byte")
@@ -402,6 +403,12 @@ nmap <Leader>h <C-W><C-H>
 nmap <Leader>j <C-W><C-J>
 nmap <Leader>k <C-W><C-K>
 nmap <Leader>l <C-W><C-L>
+"tab窗口的切换移动
+nmap <silent><tab>h :tabp<cr>
+nmap <silent><tab>j :tabnew<cr>
+nmap <silent><tab>k :tabclose<cr>
+nmap <silent><tab>l :tabn<cr>
+nmap <silent><s-tab> :tabnext<cr>
 " 分割出的窗口 在下边或右边
 set splitbelow
 set splitright
