@@ -162,6 +162,9 @@ Plug 'Quramy/tsuquyomi'
 Plug 'luochen1990/rainbow'
 "markdown
 Plug 'tpope/vim-markdown'
+"markdown preview
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
 "formate js
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 "中文排版规范化用法  :PanGu
