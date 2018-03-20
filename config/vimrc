@@ -600,8 +600,8 @@ set scrolloff=9    " Set  lines to the cursor - when moving vertically using j/k
 "test2
 "快捷提交
 nmap <leader>p <Plug>(Gpush)
-"F5 刷新编辑器
-nmap <F5> :call Cd_source()<CR> 
+"leader6 刷新编辑器
+nnoremap <leader>6 :call Cd_source()<CR> 
 if !exists("*Edit_vim_plug")
 func Edit_vim_plug()
   :cd $HOME/vim-plug
@@ -616,8 +616,8 @@ endfunc
 endif
 "leader+5 编辑vimrc
 map <leader>5 :call Edit_vim_plug()<CR>
-"leader+6 预览markdown 需要python和插件支持
-nnoremap <leader>6 :MarkdownPreview<cr>
+"leader+7 预览markdown 需要python和插件支持
+nnoremap <leader>7 :MarkdownPreview<cr>
 "source vimrc的时候会重新定义一下fuck，所以要想不触发错误，得在定义时加入判断
 if !exists("*Fuck")
 function! Fuck()
