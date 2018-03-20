@@ -601,7 +601,7 @@ set scrolloff=9    " Set  lines to the cursor - when moving vertically using j/k
 "快捷提交
 nmap <leader>p <Plug>(Gpush)
 "F5 刷新编辑器
-nmap <F5> :source $MYVIMRC<CR> 
+nmap <F5> :cd - && source $MYVIMRC<CR> 
 if !exists("*Edit_vim_plug")
 func Edit_vim_plug()
   :cd $HOME/vim-plug
