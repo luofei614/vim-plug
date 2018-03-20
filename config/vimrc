@@ -22,12 +22,12 @@ if has('win32') || has('win64')
     " Newer Windows files might contain utf-8 or utf-16 LE so we might
     " want to try them first.
     set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15,chines
-set guifont=Consolas:h12
-"解决菜单乱码
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-"解决consle输出乱码
-language messages zh_CN.utf-8
+    set guifont=Consolas:h12
+    "解决菜单乱码
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
+    "解决consle输出乱码
+    language messages zh_CN.utf-8
   endif
 endif
 " }
@@ -391,6 +391,7 @@ let g:multi_cursor_quit_key='<Esc>'
 
 " 映射全选 ctrl+a
 "map <C-A> ggVG
+"窗口类---------------------------------------
 "map! <C-A> <Esc>ggVG
 "快速关闭单个窗口
 nmap <leader>q <C-W>q
@@ -401,6 +402,18 @@ nmap <Leader>h <C-W><C-H>
 nmap <Leader>j <C-W><C-J>
 nmap <Leader>k <C-W><C-K>
 nmap <Leader>l <C-W><C-L>
+" 分割出的窗口 在下边或右边
+set splitbelow
+set splitright
+" gvim 不显示工具/菜单栏
+set guioptions-=T
+set guioptions-=m
+set guioptions-=L
+set guioptions-=r
+set guioptions-=b
+" 使用内置tab样式而不是gui样式
+set guioptions-=e
+set nolist
 " import emacs map
 imap <C-A> <HOME>
 imap <C-E> <END>
