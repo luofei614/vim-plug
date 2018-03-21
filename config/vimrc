@@ -114,7 +114,7 @@ Plug 'w0rp/ale'
 "jsx插件
 Plug 'mxw/vim-jsx'
 "括号改变
-"Plug 'surround.vim'
+Plug 'tpope/vim-surround'
 "css color
 Plug 'ap/vim-css-color'
 " {}
