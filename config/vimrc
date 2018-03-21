@@ -317,17 +317,8 @@ map! <F6> <Esc>:! tab vim<CR><CR>
 "noremap r "_d
 
 
-"快捷键设置
-"在tree中t就可以新建一个tab来编辑
-nmap <Leader>3 :NERDTreeToggle<CR>
-"vim中的map中的!代表了插入模式和命令模式
-"而在后两者的模式的输入中对空格本身的判断延时会影响使用
-"所以去掉
-"nmap! <Leader>3 <Esc>:NERDTreeToggle<CR>
 
-map <F12> :TagbarToggle<CR>
 
-map! <F12> <Esc>:TagbarToggle<CR>
 
 "快速查找文件
 
@@ -342,7 +333,7 @@ let g:CommandTAcceptSelectionTabMap = '<CR>'
 "silent是指执行后面的命令时不显示在命令栏
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>g :Ag<CR>
-nnoremap <silent> <Leader>v :Tags<CR>
+"nnoremap <silent> <Leader>v :Tags<CR>
 "map <C-P> :tabnew<CR>:FZF<CR>
 "map!<C-P> <ESc>:w<CR> :tabnew<CR>:FZF<CR>
 
@@ -445,8 +436,20 @@ nnoremap gp :AsyncRun git push<CR>
 augroup vimrc
   autocmd QuickFixCmdPost * botright copen 8
 augroup END
-"F4 操控quickfixc窗口
-noremap <Leader>4 :call asyncrun#quickfix_toggle(8)<cr>
+
+"leader+0~9 快捷键设置
+"在tree中t就可以新建一个tab来编辑
+nmap <Leader>1 :NERDTreeToggle<CR>
+"vim中的map中的!代表了插入模式和命令模式
+"而在后两者的模式的输入中对空格本身的判断延时会影响使用
+"所以去掉
+"nmap! <Leader>3 <Esc>:NERDTreeToggle<CR>
+"leader2 操控quickfixc窗口
+nnoremap <Leader>2 :call asyncrun#quickfix_toggle(8)<cr>
+"leader 3 打开 tagbar
+nnoremap <leader>3 :TagbarToggle<CR>
+"leader 4 打开 Tags
+nnoremap <leader>4 :AsyncRun ctags -R
 "ctrl+s为保存
 map <C-S> :w<CR>
 inoremap <C-S> <C-O>:w<CR>

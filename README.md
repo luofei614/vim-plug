@@ -32,11 +32,25 @@ windows下把install.sh改为 install.bat即可
 
 * leader+hjjk：窗口间移动
 
-* leader+3 ：  在编辑器左侧打开文件浏览器， 再按一次F11则会关闭文件浏览器。
+* leader+1 ：在编辑器左侧打开文件浏览器。
+
+* leader+2 ：开关quickfix窗口 
+
+* leader+3 ：在编辑器右侧打开当前文件的函数列表
 
 * leader+4 ：关闭quickfix窗口 
 
 * leader+5 ：快速编辑vimrc
+
+* leader+6 ：快速加载vimrc
+
+* leader+7 ：预览markdown
+
+* leader+t: 测试
+
+* leader+r: 运行
+
+* leader+b: build
 
 * leader+q: 快速退出VIM单个窗口
 
@@ -46,11 +60,8 @@ windows下把install.sh改为 install.bat即可
 
 * shift+q: 快速退出VIM。  如果vim同时打开多个文件是，不用挨着一个一个关闭。
 
-* F5  ： 刷新vim更改
-
-* F12：   在编辑器右侧打开当前文件的函数列表， 再安一次F12关闭函数列表。函数列表是基于ctags的先需要在项目目录下运行 `ctags -R`  在VIM中按快捷键 F3 可以自动执行ctags命令。
-
 * ctrl+] ： 跳到函数声明出（自己定义的函数，非系统函数），会在当前界面打开函数声明文件，如果想新建个tab页再跳到函数声明处，可以用 `ctrl+\`
+
 
 
 
