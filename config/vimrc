@@ -449,7 +449,7 @@ nnoremap <Leader>2 :call asyncrun#quickfix_toggle(8)<cr>
 "leader 3 打开 tagbar
 nnoremap <leader>3 :TagbarToggle<CR>
 "leader 4 打开 Tags
-nnoremap <leader>4 :AsyncRun ctags -R
+nnoremap <leader>4 :AsyncRun ctags -R --fields=+S .<CR>
 "ctrl+s为保存
 map <C-S> :w<CR>
 inoremap <C-S> <C-O>:w<CR>
