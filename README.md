@@ -22,7 +22,7 @@ windows下把install.sh改为 install.bat即可
 
 默认leader键是空格
 
-* git命令：gca 提交 gp推送 gpl 拉取
+* git命令：gca 提交 gp推送 gl 拉取
 
 * jk： 映射为ESC键
 
@@ -32,7 +32,7 @@ windows下把install.sh改为 install.bat即可
 
 * leader+hjjk：窗口间移动
 
-* leader+1 ：在编辑器左侧打开文件浏览器。
+* leader+1 ：在编辑器左侧打开文件浏览器。[C进入文件夹 cd切换路径 t新标签打开 i新窗口打开]
 
 * leader+2 ：开关quickfix窗口 
 
