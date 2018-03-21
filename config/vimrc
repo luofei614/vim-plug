@@ -316,11 +316,6 @@ map! <F6> <Esc>:! tab vim<CR><CR>
 "nnoremap r "_d
 "noremap r "_d
 
-"快速生成tag文件
-
-map <F3> :! ctags -R<CR>
-
-map! <F3> <Esc>:! ctags -R<CR>
 
 "快捷键设置
 "在tree中t就可以新建一个tab来编辑
@@ -346,7 +341,8 @@ let g:CommandTAcceptSelectionTabMap = '<CR>'
 
 "silent是指执行后面的命令时不显示在命令栏
 nnoremap <silent> <Leader>f :Files<CR>
-nnoremap <Leader>g :Ag<CR>
+nnoremap <silent> <Leader>g :Ag<CR>
+nnoremap <silent> <Leader>v :Tags<CR>
 "map <C-P> :tabnew<CR>:FZF<CR>
 "map!<C-P> <ESc>:w<CR> :tabnew<CR>:FZF<CR>
 
