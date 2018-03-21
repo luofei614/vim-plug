@@ -10,9 +10,9 @@ lnif() {
 }
 
 echo "Step0: install dependencies "
-sudo apt-get install silversearcher-ag
-sudo yum install the_silver_searcher
-brew install the_silver_searcher
+sudo apt-get install silversearcher-ag ctags
+sudo yum install the_silver_searcher ctags
+brew install the_silver_searcher ctags
 
 echo "Step1: backing up current vim config"
 today=`date +%Y%m%d`
