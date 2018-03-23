@@ -165,6 +165,11 @@ Plug 'iamcco/markdown-preview.vim',{'for':'markdown'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 "中文排版规范化用法  :PanGu
 Plug 'hotoo/pangu.vim'
+func PanGu_Full()
+  :call PanGuSpacing()
+  "段首加俩全角空格
+  :g!/^$/s/^/　　/
+endfunc 
 "异步补全，需要python3
 "if has("python3")
 "if has('nvim')
@@ -373,6 +378,7 @@ let g:multi_cursor_quit_key='<Esc>'
 "map! <C-A> <Esc>ggVG
 "映射复制、粘贴、剪贴ctrl+c ctrl+v ctrl+x
 "理解了下寄存器 命令模式需要C-R"才能粘贴 可视模式复制剪切
+"内部寄存器是"，外部是+
 cnoremap <leader>v <C-R>"
 nnoremap <leader>v "+p
 vnoremap <leader>c "+y
