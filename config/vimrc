@@ -357,16 +357,6 @@ nnoremap <c-]> g<c-]>
 
 vnoremap <c-]> g<c-]>
 
-"映射复制、粘贴、剪贴ctrl+c ctrl+v ctrl+x
-
-"还原了C-V的多行编辑模式
-map <C-V> "+pa<Esc>
-
-map! <C-V> <Esc>"+pa
-
-map <C-C> "+y
-
-map <C-X> "+x
 "多行光标键位解绑
 let g:multi_cursor_use_default_mapping=0
 " Default mapping
@@ -381,6 +371,12 @@ let g:multi_cursor_quit_key='<Esc>'
 "map <C-A> ggVG
 "窗口类---------------------------------------
 "map! <C-A> <Esc>ggVG
+"映射复制、粘贴、剪贴ctrl+c ctrl+v ctrl+x
+"理解了下寄存器 命令模式需要C-R"才能粘贴 可视模式复制剪切
+cnoremap <leader>v <C-R>"
+nnoremap <leader>v "+p
+vnoremap <leader>c "+y
+vnoremap <leader>x "+x
 "快速关闭单个窗口
 nmap <leader>q <C-W>q
 "多窗口切换

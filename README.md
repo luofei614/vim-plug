@@ -46,6 +46,12 @@ windows下把install.sh改为 install.bat即可
 
 * leader+7 ：预览markdown
 
+* leader+x: 可视模式下剪切
+
+* leader+c: 可视模式下复制
+
+* leader+v: 粘贴
+
 * leader+t: 测试
 
 * leader+r: 运行
