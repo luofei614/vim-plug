@@ -165,7 +165,7 @@ Plug 'iamcco/markdown-preview.vim',{'for':'markdown'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 "中文排版规范化用法  :PanGu
 Plug 'hotoo/pangu.vim'
-func PanGu_Full()
+func! PanGu_Full()
   :call PanGuSpacing()
   "段首加俩全角空格
   :g!/^$/s/^/　　/
