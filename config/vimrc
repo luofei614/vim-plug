@@ -39,7 +39,7 @@ let g:mapleader = ' '
 " Make sure you use single quotes
 Plug 'junegunn/vim-easy-align'
 " Plugin options
-Plug 'nsf/gocode', { 'rtp': 'vim' }
+Plug 'nsf/gocode', { 'rtp': 'vim','for':'go' }
 
 Plug 'vim-scripts/AutoComplPop'
 "浏览树
@@ -58,16 +58,13 @@ else
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 endif
 Plug 'junegunn/fzf.vim'
+"国人出品 flygrep 功能类似the-silver-searcher
+Plug 'wsdjeg/flygrep.vim'
 Plug 'vim-scripts/WebAPI.vim'
 
 Plug 'vim-scripts/Gist.vim'
 
-Plug 'tomasr/molokai'
-"七年没更新的配色能用个鬼
-"Plug 'altercation/solarized'
-"Plug 'altercation/vim-colors-solarized'
-"Plug 'Solarized'
-"找来个支持truecolor的
+"Plug 'tomasr/molokai'
 Plug 'lifepillar/vim-solarized8'
 
 "Plug 'PDV--phpDocumentor-for-Vim'
@@ -120,7 +117,6 @@ Plug 'ap/vim-css-color'
 " {}
 Plug 'jiangmiao/auto-pairs'
 "</>
-"Plug 'docunext/closetag.vim'
 Plug 'alvan/vim-closetag'
 "highlight tag
 "Plug 'gregsexton/matchtag'
@@ -129,7 +125,7 @@ Plug 'vim-scripts/matchit.zip'
 "tern js 补全
 Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
 "Go 插件
-Plug 'fatih/vim-go' , { 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go' , { 'do': ':GoInstallBinaries','for':'go' }
 "git 插件
 Plug 'tpope/vim-fugitive'
 "Plug 'mhinz/vim-signify'
@@ -148,7 +144,7 @@ Plug 'skywind3000/asyncrun.vim'
 "编译任务插件
 Plug 'skywind3000/vimmake'
 Plug 'hsanson/vim-android'
-Plug 'chemzqm/wxapp.vim'
+"Plug 'chemzqm/wxapp.vim'
 "太慢了不准备用了
 "Plug 'ctrlpvim/ctrlp.vim'
 "用不了ack的命令，不知道为什么
@@ -161,10 +157,10 @@ Plug 'Quramy/tsuquyomi'
 "彩虹括号
 Plug 'luochen1990/rainbow'
 "markdown
-Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-markdown',{'for':'markdown'}
 "markdown preview
-Plug 'iamcco/mathjax-support-for-mkdp'
-Plug 'iamcco/markdown-preview.vim'
+Plug 'iamcco/mathjax-support-for-mkdp',{'for':'markdown'}
+Plug 'iamcco/markdown-preview.vim',{'for':'markdown'}
 "formate js
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 "中文排版规范化用法  :PanGu
@@ -333,6 +329,7 @@ let g:CommandTAcceptSelectionTabMap = '<CR>'
 "silent是指执行后面的命令时不显示在命令栏
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>g :Ag<CR>
+nnoremap <silent> <Leader>s :FlyGrep<CR>
 "nnoremap <silent> <Leader>v :Tags<CR>
 "map <C-P> :tabnew<CR>:FZF<CR>
 "map!<C-P> <ESc>:w<CR> :tabnew<CR>:FZF<CR>
