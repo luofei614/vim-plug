@@ -81,8 +81,8 @@ Plug 'pangloss/vim-javascript'
 " jquery , angularjs 等语法
 Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
 
-
-Plug 'vim-scripts/Mark'
+"不晓得怎么用而且还有冲突，去掉，单引号自带mark作用
+"Plug 'vim-scripts/Mark'
 "css私有前缀
 Plug 'vim-scripts/prefixer.vim'
 "能缩减HTML代码
@@ -709,6 +709,7 @@ augroup gocmd
   autocmd FileType go nmap <leader>t <Plug>(go-test)
   autocmd FileType go nmap <leader>b <Plug>(go-build)
   autocmd FileType go nmap <leader>r <Plug>(go-run)
+  autocmd FileType go let g:go_highlight_types =1
 augroup END
 augroup jscmd
   autocmd FileType javascript nmap <leader>t :AsyncRun npm test<CR>
