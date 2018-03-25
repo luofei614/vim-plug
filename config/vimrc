@@ -40,8 +40,11 @@ let g:mapleader = ' '
 Plug 'junegunn/vim-easy-align'
 " Plugin options
 Plug 'nsf/gocode', { 'rtp': 'vim','for':'go' }
-
-Plug 'vim-scripts/AutoComplPop'
+"纯vimscript异步补全
+Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'vim-scripts/AutoComplPop'
+"autocomplpop 设置
+"let g:AutoComplPop_IgnoreCaseOption=1
 "浏览树
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "浏览树显示git状态插件
@@ -194,9 +197,6 @@ let g:used_javascript_libs = 'jQuery,AngularJS,AngularUI,RequireJS'
 "php只做语法检查
 "let g:syntastic_php_checkers = ['php']
 
-"autocomplpop 设置
-
-let g:AutoComplPop_IgnoreCaseOption=1
 
 set ignorecase
 
