@@ -46,7 +46,9 @@ windows下把install.sh改为 install.bat即可
 
 * leader+7 ：预览markdown
 
-* leader+x: 可视模式下剪切
+* leader+': 将单词用'包裹
+
+* leader+": 将单词用"包裹
 
 * leader+c: 可视模式下复制
 
