@@ -18,7 +18,7 @@ windows下把install.sh改为 install.bat即可
 
 支持自动更新，默认开启
 
-设置了很多方便的快捷键
+设置了很多方便的快捷键,一些自定义函数,PanGu_Full是中文排版加行首空格
 
 默认leader键是空格
 
