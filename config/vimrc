@@ -110,8 +110,8 @@ Plug 'https://github.com/burnettk/vim-angular.git'
 Plug 'w0rp/ale'
 "jsx插件
 Plug 'mxw/vim-jsx'
-"括号改变
-Plug 'tpope/vim-surround'
+"括号改变 有自己定制了
+"Plug 'tpope/vim-surround'
 "css color
 Plug 'ap/vim-css-color'
 " {}
@@ -383,6 +383,11 @@ cnoremap <leader>v <C-R>"
 nnoremap <leader>v "+p
 vnoremap <leader>c "+y
 vnoremap <leader>x "+x
+"添加括号
+"这个规则和下个规则实际效果一致
+nnoremap <leader>' viw<esc>a'<ESC>hbi'<Esc>lel
+"映射了连续操作，成对的引号插件不生效不影响
+nnoremap <leader>" bi"<ESC>ea"<ESC>
 "快速关闭单个窗口
 nmap <leader>q <C-W>q
 "多窗口切换
