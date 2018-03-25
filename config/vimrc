@@ -40,8 +40,6 @@ let g:mapleader = ' '
 Plug 'junegunn/vim-easy-align'
 " Plugin options
 Plug 'nsf/gocode', { 'rtp': 'vim','for':'go' }
-"纯vimscript异步补全
-Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'vim-scripts/AutoComplPop'
 "autocomplpop 设置
 "let g:AutoComplPop_IgnoreCaseOption=1
@@ -174,16 +172,44 @@ func! PanGu_Full()
   :g!/^$/s/^/　　/
 endfunc 
 "异步补全，需要python3
-"if has("python3")
-"if has('nvim')
-"  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"else
-"  Plug 'Shougo/deoplete.nvim'
-"  Plug 'roxma/nvim-yarp'
-"  Plug 'roxma/vim-hug-neovim-rpc'
-"endif
-"let g:deoplete#enable_at_startup = 1
-"endif
+if has('python3')
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
+  let g:deoplete#enable_at_startup = 1
+else
+  "纯vimscript异步补全
+  Plug 'prabirshrestha/asyncomplete.vim'
+  Plug 'prabirshrestha/asyncomplete-buffer.vim'
+  Plug 'prabirshrestha/asyncomplete-file.vim'
+  Plug 'prabirshrestha/asyncomplete-gocode.vim'
+  au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+  \ 'name':'buffer',
+  \ 'whitelist':['*'],
+  \ 'blacklist':['go'],
+  \ 'completor':function('asyncomplete#sources#buffer#completor'),
+  \ }))
+  au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
+  \  'name':'file',
+  \  'whitelist':['*'],
+  \  'priority':10,
+  \  'completor':function('asyncomplete#sources#file#completor')
+  \  }))
+  au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options({
+  \  'name':'gocode',
+  \  'whitelist':['go'],
+  \  'completor':function('asyncomplete#sources#gocode#completor'),
+  \  'config':{
+  \    'gocode_path':expand('~/go/bin/gocode')
+  \  }
+  \  }))
+
+endif
+
 call plug#end()
 
 
