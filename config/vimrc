@@ -535,31 +535,29 @@ map <A-LeftMouse> <C-]>
 
 map! <A-LeftMouse> <Esc><C-]>
 
-
-
-function! InsertTabWrapper()
-
-  let col=col('.')-1
-
-  if !col || getline('.')[col-1] !~ '\k'
-
-    return "\<TAB>"
-
-  else
-
-    return "\<C-x>\<C-o>"
-
-  endif
-
-endfunction
-
+"补全方式换异步
+func! s:check_back_space() abort
+  let col = col('.') -1
+  return !col || getline('.')[col-1]=~ '\s'
+endfunc
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ?"\<C-n>":
+  \ <SID>check_back_space() ? "\<TAB>":
+  \ asyncomplete#force_refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"function! InsertTabWrapper()
+"  let col=col('.')-1
+"  if !col || getline('.')[col-1] !~ '\k'
+"    return "\<TAB>"
+"  else
+"    return "\<C-x>\<C-o>"
+"  endif
+"endfunction
 "按tab键，全能提示，
-
 "注意要用inoremap，不能用map！，如果用map！在命令模式下tab键没有提示功能。
-
-inoremap <TAB> <C-R>=InsertTabWrapper()<CR>
+"inoremap <TAB> <C-R>=InsertTabWrapper()<CR>
 "shift+tab 展开代码片段
-imap <S-TAB> <Plug>snipMateNextOrTrigger
+"imap <S-TAB> <Plug>snipMateNextOrTrigger
 
 "在mac下iterm终端标题中中显示文件名称
 autocmd BufEnter *.* exe 'silent ! echo -ne "\033];%:t\007"'
