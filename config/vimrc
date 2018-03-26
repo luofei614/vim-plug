@@ -536,6 +536,7 @@ map <A-LeftMouse> <C-]>
 map! <A-LeftMouse> <Esc><C-]>
 
 "补全方式换异步
+let g:asyncomplete_auto_popup =1
 func! s:check_back_space() abort
   let col = col('.') -1
   return !col || getline('.')[col-1]=~ '\s'
