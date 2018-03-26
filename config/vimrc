@@ -66,7 +66,11 @@ Plug 'vim-scripts/WebAPI.vim'
 Plug 'vim-scripts/Gist.vim'
 
 "Plug 'tomasr/molokai'
-Plug 'lifepillar/vim-solarized8'
+"Plug 'lifepillar/vim-solarized8'
+"vscode dark
+Plug 'tomasiser/vim-code-dark'
+colorscheme codedark
+let g:airline_theme = 'codedark'
 
 "Plug 'PDV--phpDocumentor-for-Vim'
 "注释看看会不会影响到markdown
@@ -255,32 +259,32 @@ set background=dark
     endif 
   endfunction 
 "let g:solarized_use16 = 1
-if has('gui_running')
-  colorscheme solarized8
-else
-  "if has('win32') || has('win64')
-    "if $COLORTERM == 'truecolor'
-    "  colorscheme solarized8
-    "else
-    "其实这里还有一个情况。当在win10从商店下好ubuntu子系统后，命令行就支持真彩色了
-    "发现都不是，只要设置win下都真彩色就行，不用丑的次级配色了，可能支持更早的系统
-    "  colorscheme apprentice
-    "endif
-  "else
-    "是否支持真彩色
-    if $COLORTERM == 'truecolor'
-      "设置终端真彩色
-      set termguicolors
-    elseif has('win32') || has('win64')
-      set termguicolors
-      "设置256色
-      "似乎windows不安装ubuntu前是色不全，安装后色全了
-    else
-      set t_Co=256
-    endif
-    colorscheme solarized8
-  "endif
-endif
+"if has('gui_running')
+"  colorscheme solarized8
+"else
+"  "if has('win32') || has('win64')
+"    "if $COLORTERM == 'truecolor'
+"    "  colorscheme solarized8
+"    "else
+"    "其实这里还有一个情况。当在win10从商店下好ubuntu子系统后，命令行就支持真彩色了
+"    "发现都不是，只要设置win下都真彩色就行，不用丑的次级配色了，可能支持更早的系统
+"    "  colorscheme apprentice
+"    "endif
+"  "else
+"    "是否支持真彩色
+"    if $COLORTERM == 'truecolor'
+"      "设置终端真彩色
+"      set termguicolors
+"    elseif has('win32') || has('win64')
+"      set termguicolors
+"      "设置256色
+"      "似乎windows不安装ubuntu前是色不全，安装后色全了
+"    else
+"      set t_Co=256
+"    endif
+"    colorscheme solarized8
+"  "endif
+"endif
 "high low normal
 "let g:solarized_visibility='high'
 "high low normal bold
@@ -564,16 +568,16 @@ set expandtab
 "加快速度
 "set synmaxcol=200
 set ttyfast " u got a fast terminal
-if has('nvim')
-  if has('win32') || has('win64')
-    "windows命令行时候必须有termguicolor色彩，但同时在xshellssh中开启这个色彩就不对了
-    set termguicolors
-  else
-  endif
-  colorscheme solarized8
-else
-  set ttyscroll=3
-endif
+"if has('nvim')
+"  if has('win32') || has('win64')
+"    "windows命令行时候必须有termguicolor色彩，但同时在xshellssh中开启这个色彩就不对了
+"    set termguicolors
+"  else
+"  endif
+"  colorscheme solarized8
+"else
+"  set ttyscroll=3
+"endif
 set lazyredraw " to avoid scrolling problems
 "删除键
 set backspace=eol,start,indent
