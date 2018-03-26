@@ -184,7 +184,7 @@ if has('python3')
   else
     Plug 'Shougo/deoplete.nvim'
     Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
+    Plug 'roxma/vim-hug-neovim-rpc',{'do':'pip3 install neovim'}
   endif
   let g:deoplete#enable_at_startup = 1
 else
