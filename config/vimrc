@@ -66,11 +66,13 @@ Plug 'vim-scripts/WebAPI.vim'
 Plug 'vim-scripts/Gist.vim'
 
 "Plug 'tomasr/molokai'
-"Plug 'lifepillar/vim-solarized8'
+Plug 'lifepillar/vim-solarized8'
 "vscode dark
-Plug 'tomasiser/vim-code-dark'
-colorscheme codedark
-let g:airline_theme = 'codedark'
+"原作者的不能使用了 发现换一个人也不行 原来是colorschemey应该放外面
+"Plug 'tomasiser/vim-code-dark'
+"Plug 'dunstontc/vim-code-dark'
+"Plug 'dunstontc/vim-vscode-theme'
+"colorscheme dark_plus
 
 "Plug 'PDV--phpDocumentor-for-Vim'
 "注释看看会不会影响到markdown
@@ -243,6 +245,8 @@ let g:rainbow_active = 1
 "颜色主题设置
 
 
+"colorscheme codedark
+"let g:airline_theme = 'codedark'
 "let g:solarized_termcolors=16
 "两种流行风格的主题
 "colorscheme molokai
@@ -259,32 +263,32 @@ set background=dark
     endif 
   endfunction 
 "let g:solarized_use16 = 1
-"if has('gui_running')
-"  colorscheme solarized8
-"else
-"  "if has('win32') || has('win64')
-"    "if $COLORTERM == 'truecolor'
-"    "  colorscheme solarized8
-"    "else
-"    "其实这里还有一个情况。当在win10从商店下好ubuntu子系统后，命令行就支持真彩色了
-"    "发现都不是，只要设置win下都真彩色就行，不用丑的次级配色了，可能支持更早的系统
-"    "  colorscheme apprentice
-"    "endif
-"  "else
-"    "是否支持真彩色
-"    if $COLORTERM == 'truecolor'
-"      "设置终端真彩色
-"      set termguicolors
-"    elseif has('win32') || has('win64')
-"      set termguicolors
-"      "设置256色
-"      "似乎windows不安装ubuntu前是色不全，安装后色全了
-"    else
-"      set t_Co=256
-"    endif
-"    colorscheme solarized8
-"  "endif
-"endif
+if has('gui_running')
+  colorscheme solarized8
+else
+  "if has('win32') || has('win64')
+    "if $COLORTERM == 'truecolor'
+    "  colorscheme solarized8
+    "else
+    "其实这里还有一个情况。当在win10从商店下好ubuntu子系统后，命令行就支持真彩色了
+    "发现都不是，只要设置win下都真彩色就行，不用丑的次级配色了，可能支持更早的系统
+    "  colorscheme apprentice
+    "endif
+  "else
+    "是否支持真彩色
+    if $COLORTERM == 'truecolor'
+      "设置终端真彩色
+      set termguicolors
+    elseif has('win32') || has('win64')
+      set termguicolors
+      "设置256色
+      "似乎windows不安装ubuntu前是色不全，安装后色全了
+    else
+      set t_Co=256
+    endif
+    colorscheme solarized8
+  "endif
+endif
 "high low normal
 "let g:solarized_visibility='high'
 "high low normal bold
