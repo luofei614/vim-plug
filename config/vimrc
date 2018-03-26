@@ -71,7 +71,7 @@ Plug 'lifepillar/vim-solarized8'
 "原作者的不能使用了 发现换一个人也不行 原来是colorschemey应该放外面
 "Plug 'tomasiser/vim-code-dark'
 "Plug 'dunstontc/vim-code-dark'
-"Plug 'dunstontc/vim-vscode-theme'
+Plug 'dunstontc/vim-vscode-theme'
 "colorscheme dark_plus
 
 "Plug 'PDV--phpDocumentor-for-Vim'
@@ -252,6 +252,19 @@ let g:rainbow_active = 1
 "colorscheme molokai
 "let g:rehash256 = 1
 set background=dark
+let g:tcc="solarized8"
+" Allow to trigger colorscheme
+  function! ToggleCC() 
+    " Inversion 
+    if g:tcc== "solarized8" 
+      colorscheme dark_plus
+      let g:tcc="dark_plus"
+      echom g:tcc
+    else 
+      colorscheme solarized8
+      let g:tcc="solarized8"
+    endif 
+  endfunction 
 " Allow to trigger background 
   function! ToggleBG() 
     let s:tbg = &background 
@@ -296,13 +309,14 @@ endif
 "老版光标
 "let g:solarized_old_cursor_style=1
 map cbg :call ToggleBG()<CR>
+map ccs :call ToggleCC()<CR>
 "colorscheme space-vim-dark
 inoremap jk <ESC>
 "删除了半天的插件后得出的结论
 "普通模式会对j进行一个判断，判断后面没跟k才会输出j，结果就造成了看上去往下走的时候最后一个键卡顿的效果
 "map jk  <ESC>
 "命令模式还是可以用
-cmap jk <ESC>
+cnoremap jk <ESC>
 "emmet 设置
 
 let g:user_emmet_expandabbr_key = '<C-Y>'
