@@ -1,4 +1,6 @@
-	
+## 停止支持 重构后 新项目地址 https://github.com/sherylynn/vimcode.git
+
+
 (一些插件如node和vim-go依赖相应的node和go环境支持)
 
 运行2个命令配置一个强大的VIM编辑器。  
