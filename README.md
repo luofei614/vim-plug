@@ -11,24 +11,21 @@
  这些VIM配置我已经用了四年了，用着非常爽。 所以特意整理出来分享给大家，大家只需要简单的执行上面三条命令就能获得我的配置。
 
 安装好后效果如下：
-![enter image description here](https://github.com/luofei614/vim-plug/raw/master/screenshot.png)
+![enter image description here](https://github.com/jsyzchen/vim-plug/raw/master/screenshot.png)
 
 内置两种流行主题，默认是sublime风格的主题。
 
 设置了很多方便的快捷键 
 
-* F11 ：  在编辑器左侧打开文件浏览器， 再按一次F11则会关闭文件浏览器。 
+* F7 ：  在编辑器左侧打开文件浏览器， 再按一次F7则会关闭文件浏览器。 
 
-* F12：   在编辑器右侧打开当前文件的函数列表， 再安一次F12关闭函数列表。函数列表是基于ctags的先需要在项目目录下运行 `ctags -R`  在VIM中按快捷键 F3 可以自动执行ctags命令。
+* F8：   在编辑器右侧打开当前文件的函数列表， 再安一次F8关闭函数列表。函数列表是基于ctags的先需要在项目目录下运行 `ctags -R`  在VIM中按快捷键 F3 可以自动执行ctags命令。
 
-* 注意，在mac下， F11,F12 是系统默认的快捷键，需要修改系统设置。
-
-![enter image description here](https://github.com/luofei614/vim-plug/raw/master/Fn1.png)
+![enter image description here](https://github.com/jsyzchen/vim-plug/raw/master/Fn1.png)
 
 在"设置"->"键盘"中勾选"将F1,F2等快捷键作为标准功能键"
 
 然后选择"快捷键"这个tab页，去掉"显示桌面"和"显示Dashboard"的快捷键
-![enter image description here](https://github.com/luofei614/vim-plug/raw/master/Fn2.png)
 
 * F2: 可以快速查函数手册， 如果当前VIM的光标在php的file_put_contents函数上，按一下F2 会自动打开PHP手册的网页。
 
@@ -43,5 +40,3 @@
 * shift+q: 快速退出VIM。  如果vim同时打开多个文件是，不用挨着一个一个关闭。
 
 建议大家在看看.vimrc 配置文件 了解更多用法。
-
-
