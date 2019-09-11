@@ -7,17 +7,17 @@ Plug 'nsf/gocode', { 'rtp': 'vim' }
 
 Plug 'https://github.com/luofei614/vim-plug', { 'dir':'~/.vim/my'}
 
-Plug 'AutoComplPop'
+Plug 'vim-scripts/AutoComplPop'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'Tagbar'
+Plug 'vim-scripts/Tagbar'
 "Bundle 'minibufexpl.vim'
 
 "zencoding 改名为了 Emmet
 Plug 'https://github.com/luofei614/Emmet.vim'
 
-Plug 'L9'
+Plug 'vim-scripts/L9'
 
-"Plug 'FuzzyFinder'
+"Plug 'vim-scripts/FuzzyFinder'
 "快速浏览文件，FuzzyFinder 也能快速浏览文件， 但是如果项目文件多会很慢
 "如果系统升级可以需要运行 gem update --system, do中的命令可能需要手动运行 
 "Plug 'Command-T',{'do': 'cd ./ruby/command-t/; ruby extconf.rb ; make'} 
@@ -26,17 +26,19 @@ Plug 'L9'
 " Plugin outside ~/.vim/plugged with post-update hook
 " 下面这个插件可取代Command-T 但是现在暂时不支持目录忽略，所以先暂时不用
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-Plug 'WebAPI.vim'
+Plug 'vim-scripts/WebAPI.vim'
 
-Plug 'Gist.vim'
+Plug 'vim-scripts/Gist.vim'
 
-Plug 'molokai'
+Plug 'https://github.com/tomasr/molokai'
 
-Plug 'Solarized'
+Plug 'https://github.com/altercation/solarized'
 
-Plug 'PDV--phpDocumentor-for-Vim'
+Plug 'https://github.com/altercation/vim-colors-solarized'
 
-"Plug 'https://github.com/luofei614/html5css3.git'
+Plug 'vim-scripts/PDV--phpDocumentor-for-Vim'
+
+" Plug 'https://github.com/luofei614/html5css3.git'
 
 "bookmark  mm 添加书签,  mn 移动书签  mp 移动到前一个书签  ma 删除所有书签
 Plug 'MattesGroeger/vim-bookmarks'
@@ -49,18 +51,15 @@ Plug 'pangloss/vim-javascript'
 Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
 
 
-Plug 'Mark'
+Plug 'vim-scripts/Mark'
 "css私有前缀
-Plug 'prefixer.vim'
+Plug 'vim-scripts/prefixer.vim'
 "能缩减HTML代码
-Plug 'xml.vim'
+Plug 'vim-scripts/xml.vim'
 "安装此插件解决macvim下没有加号寄存器的问题。
 Plug 'https://github.com/kana/vim-fakeclip.git'
 
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
-
-"html5插件
-Plug 'othree/html5.vim'
 
 "snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -68,10 +67,10 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'https://github.com/bonsaiben/bootstrap-snippets.git'
 
-Plug 'phpunit'
+Plug 'vim-scripts/phpunit'
 
 "快速跳转到字符
-Plug 'EasyMotion'
+Plug 'vim-scripts/EasyMotion'
 
 Plug 'https://github.com/bling/vim-airline.git'
 
@@ -120,9 +119,9 @@ set t_Co=256
 
 let g:solarized_termcolors=16
 "两种流行风格的主题
-colorscheme molokai
+"colorscheme molokai
 set background=dark
-"colorscheme solarized
+colorscheme solarized
 "set background=light
 
 "emmet 设置
@@ -355,11 +354,13 @@ set backspace=eol,start,indent
 
 "基本设置
 
-set encoding=utf-8
+"set encoding=utf-8
+"set fileencoding=utf-8
+"set fileencodings=ucs-bom,utf-8,chinese
 
-set fileencoding=utf-8
-
-set fileencodings=ucs-bom,utf-8,chinese
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set enc=utf8
+set fencs=utf8,gbk,gb2312,gb18030
 
 set ambiwidth=double
 
